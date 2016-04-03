@@ -1,0 +1,128 @@
+<EntityDescriptor wsu:Id="a3173bf8-c423-4efd-a72a-2d153d034456" entityID="https://localhost/Fabrikam.SimulatedIssuer/" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <Organization>
+    <OrganizationDisplayName xml:lang="">Fabrikam</OrganizationDisplayName>
+    <OrganizationName xml:lang="">Fabrikam</OrganizationName>
+    <OrganizationURL xml:lang="">
+      https://localhost/f-Shipping/
+    </OrganizationURL>
+  </Organization>
+  <ContactPerson contactType="administrative">
+    <Company>Fabrikam</Company>
+    <GivenName>contact</GivenName>
+    <SurName>name</SurName>
+    <EmailAddress>
+      contactname@fabrikam.com
+    </EmailAddress>
+    <TelephoneNumber>555-5555</TelephoneNumber>
+  </ContactPerson>
+  <RoleDescriptor xsi:type="fed:SecurityTokenServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/wsfed/federation/200706" ServiceDescription="Fabrikam Simulated Issuer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIB6zCCAVigAwIBAgIQbZr5o8RK0J9HhL+bhvO5EDAJBgUrDgMCHQUAMBMxETAPBgNVBAMTCGZhYnJpa2FtMB4XDTAwMDEwMTAyMDAwMFoXDTM2MDEwMTAyMDAwMFowEzERMA8GA1UEAxMIZmFicmlrYW0wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKa2vl7K6FK6skcRrNuZjfGVzck7JLFSrWBJYZ6YiXk8qsxFMiP18JcJvbRXKHcaMRsVnFK8J3Yas043oPb3kVaDCBAtUizrJIt8C+mb2yb/fYOTaBq3fK/xJQo8P3SSk/FiqAgSkPRTOc/OgD85DWDQYb/xwzurtfekYdCDm4BPAgMBAAGjSDBGMEQGA1UdAQQ9MDuAEKYJJX9TKybldcakdmI0i8mhFTATMREwDwYDVQQDEwhmYWJyaWthbYIQbZr5o8RK0J9HhL+bhvO5EDAJBgUrDgMCHQUAA4GBAEw7n/bfggYj2FOGSjBw6EX+gvTBGncfv679lILB+P8Pb/UtnsEe6S8B+zMrP9MK9RNG1pfrAxPf38GJ8CJCCWS9kRawkte9IysYhgV7wjDmqS5gQ8R/6ZDVnbrkGkl2u+/O0o489VnhkDGs85NQ6wtLGb9tRZLovFYwwiGg52Ah
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <fed:ClaimTypesOffered>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Name</auth:DisplayName>
+        <auth:Description>
+          The name of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>GivenName</auth:DisplayName>
+        <auth:Description>
+          The given name of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Surname</auth:DisplayName>
+        <auth:Description>
+          The surname of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>StreetAddress</auth:DisplayName>
+        <auth:Description>
+          The street address of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>StateOrProvince</auth:DisplayName>
+        <auth:Description>
+          The state or province of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Country</auth:DisplayName>
+        <auth:Description>
+          The country of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Role</auth:DisplayName>
+        <auth:Description>
+          The role of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.fabikam.com/claims/2009/08/costcenter" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>CostCenter</auth:DisplayName>
+        <auth:Description>
+          The cost center of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.fabikam.com/claims/2009/08/organization" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Organization</auth:DisplayName>
+        <auth:Description>
+          The organization of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+    </fed:ClaimTypesOffered>
+    <fed:TokenTypesOffered>
+      <fed:TokenType Uri="urn:oasis:names:tc:SAML:1.0:assertion" />
+    </fed:TokenTypesOffered>
+    <fed:SecurityTokenServiceEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>
+          https://localhost/Fabrikam.SimulatedIssuer/
+        </Address>
+      </EndpointReference>
+    </fed:SecurityTokenServiceEndpoint>
+    <fed:PassiveRequestorEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>
+          https://localhost/Fabrikam.SimulatedIssuer/
+        </Address>
+      </EndpointReference>
+    </fed:PassiveRequestorEndpoint>
+  </RoleDescriptor>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <ds:SignedInfo>
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <ds:Reference URI="#a3173bf8-c423-4efd-a72a-2d153d034456">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+          <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <ds:DigestValue>
+          Jjcy7qGj+SUt+qd58k4FG7rv4/E=
+        </ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue>
+      EEU3/9Y3tI+39KaMIZ+cQ4+5TabuLSvElMUGmEOEsIg0O9z6GpTtUzgP1c0rCJpTq+CJltkcKPft+sLNOju5q7uY1VxVw/1Bbl6O07/XmgHSc5zvmtjr3caXfxxvzcXKfei1uDAP4RQmtIGdxSMB0PGXkcF3VYuRTNKWjP2tHOs=
+    </ds:SignatureValue>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <X509Data>
+        <X509Certificate>
+          MIIB6zCCAVigAwIBAgIQbZr5o8RK0J9HhL+bhvO5EDAJBgUrDgMCHQUAMBMxETAPBgNVBAMTCGZhYnJpa2FtMB4XDTAwMDEwMTAyMDAwMFoXDTM2MDEwMTAyMDAwMFowEzERMA8GA1UEAxMIZmFicmlrYW0wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKa2vl7K6FK6skcRrNuZjfGVzck7JLFSrWBJYZ6YiXk8qsxFMiP18JcJvbRXKHcaMRsVnFK8J3Yas043oPb3kVaDCBAtUizrJIt8C+mb2yb/fYOTaBq3fK/xJQo8P3SSk/FiqAgSkPRTOc/OgD85DWDQYb/xwzurtfekYdCDm4BPAgMBAAGjSDBGMEQGA1UdAQQ9MDuAEKYJJX9TKybldcakdmI0i8mhFTATMREwDwYDVQQDEwhmYWJyaWthbYIQbZr5o8RK0J9HhL+bhvO5EDAJBgUrDgMCHQUAA4GBAEw7n/bfggYj2FOGSjBw6EX+gvTBGncfv679lILB+P8Pb/UtnsEe6S8B+zMrP9MK9RNG1pfrAxPf38GJ8CJCCWS9kRawkte9IysYhgV7wjDmqS5gQ8R/6ZDVnbrkGkl2u+/O0o489VnhkDGs85NQ6wtLGb9tRZLovFYwwiGg52Ah
+        </X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </ds:Signature>
+</EntityDescriptor>

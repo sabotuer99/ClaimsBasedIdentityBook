@@ -1,0 +1,39 @@
+<!--
+===============================================================================
+ Microsoft patterns & practices
+ Cliams Identity Guide V2
+===============================================================================
+ Copyright © Microsoft Corporation.  All rights reserved.
+ This code released under the terms of the 
+ Microsoft patterns & practices license (http://claimsid.codeplex.com/license)
+===============================================================================
+-->
+
+<UserControl x:Class="AOrder.OrderTracking.Client.OrderTrackingView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Converters="clr-namespace:AOrder.OrderTracking.Client.Converters">
+	<UserControl.Resources>
+		<Converters:DateConverter x:Key="dateConverter" />
+		<Converters:CurrencyConverter x:Key="currencyConverter" />
+	</UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <ListView BorderThickness="0" Width="700" ItemsSource="{Binding Path=Orders}" AlternationCount="2" Grid.Row="0">
+		    <ListView.View>
+			    <GridView AllowsColumnReorder="False">
+				    <GridViewColumn Header="Date" Width="100" DisplayMemberBinding="{Binding Converter={StaticResource dateConverter}, Path=Date}" />
+				    <GridViewColumn Header="Customer" Width="130" DisplayMemberBinding="{Binding Path=Customer.Name}" />
+				    <GridViewColumn Header="Phone" Width="90" DisplayMemberBinding="{Binding Path=Customer.Phone}" />
+				    <GridViewColumn Header="Order Details" Width="220" DisplayMemberBinding="{Binding Path=Details}" />
+				    <GridViewColumn Header="Amount" Width="69" DisplayMemberBinding="{Binding Converter={StaticResource currencyConverter}, Path=Amount}" />
+				    <GridViewColumn Header="Status" Width="74" DisplayMemberBinding="{Binding Path=Status}" />
+			    </GridView>
+		    </ListView.View>
+	    </ListView>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Refresh" Width="100" Height="35" Command="{Binding RefreshCommand}" Margin="0,0,10,0"/>
+            <Button Content="Logout" Width="100" Height="35" Command="{Binding LogoutCommand}" Margin="0,0,10,0" />
+        </StackPanel>
+    </Grid>    
+</UserControl>

@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Adatum.FederationProvider.Site" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Adatum Federation Provider</title>
+    <link href="Styles.css" type="text/css" rel="Stylesheet" media="screen" />
+    <asp:ContentPlaceHolder id="HeadPlaceholder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="container">
+    
+        <div id="header">
+            <div id="logo">
+                <img src="~/Styling/Images/adatum-logo.png" alt="Adatum logo" runat="server" />
+            </div>
+            <div id="sitetitle">
+                Adatum Federation Provider
+            </div>
+        </div>
+    
+        <div id="content">
+            <asp:ContentPlaceHolder id="ContentPlaceholder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    
+    </div>
+    </form>
+</body>
+</html>

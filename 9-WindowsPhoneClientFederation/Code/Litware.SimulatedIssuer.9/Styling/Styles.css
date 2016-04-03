@@ -1,0 +1,55 @@
+﻿/************ All site ************/
+*
+{
+    font-family: Comic Sans MS, Sans-Serif;
+    font-size: medium;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
+
+#container
+{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo
+{
+    float: left;
+}
+#logo img
+{
+    height: 30px;
+    width: 150px;
+    border: 0 none;
+}
+
+#sitetitle
+{
+    font-size: 25px;
+    text-align: center;
+    width: 200px;
+}
+
+#content
+{
+    clear: both;
+    padding-top: 5px;
+}
+
+/************ Login control ************/
+#login
+{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: Black;
+    padding: 7px 10px 10px 10px;
+    text-align: center;
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7874d3cc-962c-46eb-ae18-78f075385b71" solutionId="7874d3cc-962c-46eb-ae18-78f075385b71" resetWebServer="false" name="AllClaimsGridWebPart" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="3da35291-5c7c-4742-b45c-99dd8a4689fb" />
+  </features>
+</package>

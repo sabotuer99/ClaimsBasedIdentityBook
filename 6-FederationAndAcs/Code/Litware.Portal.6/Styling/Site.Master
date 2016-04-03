@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Litware.Portal.Site" %>
+<%@ Register TagPrefix="samples" TagName="Prerequisites" Src="~/controls/PrerequisitesControl.ascx" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="masterHead" runat="server">
+    <title>Litware portal</title>
+    <link href="Styles.css" type="text/css" rel="Stylesheet" media="screen" />
+    <asp:ContentPlaceholder id="HeadPlaceholder" runat="server">
+    </asp:ContentPlaceholder>
+</head>
+<body>
+    <form id="masterForm" runat="server">
+    <div id="container">
+        <samples:Prerequisites ID="Prerequisites1" runat="server" />
+        
+        <div id="header">
+            <div id="logo">
+                <a href="http://localhost/Litware.portal/">
+                    <img src="Styling/Images/litware-logo.png" alt="Litware logo" />
+                </a>
+            </div>
+            <div id="sitetitle">
+                Litware Portal
+            </div>
+        </div>
+    
+        <div id="content">
+            <asp:ContentPlaceholder id="ContentPlaceholder" runat="server">
+            </asp:ContentPlaceholder>
+        </div>
+    
+    </div>
+    </form>
+</body>
+</html>

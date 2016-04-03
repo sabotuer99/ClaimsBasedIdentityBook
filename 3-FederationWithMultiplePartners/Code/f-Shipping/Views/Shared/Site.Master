@@ -1,0 +1,97 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage<FShipping.Models.MasterPageViewModel>" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Fabrikam Shipping</title>
+    <link href="<%= Url.Content("~/Content/styles/Styles.css") %>" rel="stylesheet" type="text/css" media="screen" />
+    <script src="<%= Url.Content("~/Scripts/jquery-1.3.2.min.js") %>" language="javascript" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(
+            function() {
+                $(".nav-categories a").hover(
+                    function() {
+                        $(".nav-categories a").removeClass("selected");
+                        $(this).addClass("selected");
+                        var divId = this.href.split('#')[1];
+                        $("#navigationTabs div").hide();
+                        $("#" + divId).show();
+                        $(".nav-categories a").removeClass("currentlySelected");
+                        $(this).addClass("currentlySelected");
+                    },
+                    function() {
+                        $(".nav-categories a").removeClass("selected");
+                        $("#navigationTabs div").hide();
+                    }
+                )
+
+                $("#navigationTabs div").hover(
+                    function() {
+                        $(this).show();
+                        $(".nav-categories a.currentlySelected").addClass("selected");
+                    },
+                    function() {
+                        $(this).hide();
+                        $(".nav-categories a").removeClass("selected");
+                    }
+                )
+            });
+    </script>
+    
+    <asp:ContentPlaceHolder ID="HeadPlaceholder" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <% if (this.Page.User.Identity.IsAuthenticated)
+            { %>
+            <div id="tenantlogo">
+                <img src="<%= Url.Content(this.Model.TenantLogoPath) %>" alt="Tenant logo" />
+            </div>
+            <%
+            } %>
+            <div id="fabrikamshippinglogo">
+                <img src="<%= Url.Content("~/Content/images/fabrikamShipping-logo.png") %>" alt="Fabrikam logo" />
+            </div>
+        </div>
+        <% if (this.Page.User.Identity.IsAuthenticated) { %>
+            <div id="topuserinformation">
+                Logged in as: <i><%= Html.Encode(this.Context.User.Identity.Name) %></i>
+                    (<%= 
+                        Html.Encode(this.Model.ClaimsIssuer)
+                        + " : " +
+                        Html.Encode(this.Model.ClaimsOriginalIssuer)
+                    %>)  |  
+                <%= Html.ActionLink("Logout", "Logout", "Home") %>
+            </div>
+            <div id="topnavigation">
+                <ul class="nav-categories">
+                    <% if (this.Context.User.IsInRole(Samples.Web.ClaimsUtilities.Fabrikam.Roles.ShipmentCreator) || this.Context.User.IsInRole(Samples.Web.ClaimsUtilities.Fabrikam.Roles.ShipmentManager))
+                       { %>
+                    <li><a href="#shipmentsTab">Shipments</a></li>
+                    <% } %>
+                    <% if (this.Context.User.IsInRole(Samples.Web.ClaimsUtilities.Fabrikam.Roles.Administrator))
+                       { %>
+                    <li><a href="#administrationTab">Administration</a></li>
+                    <% } %>
+                </ul>
+                <div id="navigationTabs">
+                    <div id="shipmentsTab" style="display: none;">
+                        <%= Html.ActionLink("All", "Index", "Shipment") %>
+                         | 
+                        <%= Html.ActionLink("New", "New", "Shipment") %>
+                    </div>
+                    <div id="administrationTab" style="display: none;">
+                        <%= Html.ActionLink("Claim mappings", "ClaimMappings", "Admin") %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+        <div id="content">
+            <asp:ContentPlaceholder id="ContentPlaceholder" runat="server">
+            </asp:ContentPlaceholder>
+        </div>
+    </div>
+</body>
+</html>

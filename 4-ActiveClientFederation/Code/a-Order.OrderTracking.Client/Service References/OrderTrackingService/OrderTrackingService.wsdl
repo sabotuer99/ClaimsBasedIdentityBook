@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="OrderTrackingService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IOrderTrackingService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:SecureConversationToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:RequireDerivedKeys />
+                    <sp:BootstrapPolicy>
+                      <wsp:Policy>
+                        <sp:SignedParts>
+                          <sp:Body />
+                          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+                        </sp:SignedParts>
+                        <sp:EncryptedParts>
+                          <sp:Body />
+                        </sp:EncryptedParts>
+                        <sp:SymmetricBinding>
+                          <wsp:Policy>
+                            <sp:ProtectionToken>
+                              <wsp:Policy>
+                                <mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy">
+                                  <wsp:Policy>
+                                    <sp:RequireDerivedKeys />
+                                    <sp:MustNotSendCancel />
+                                    <sp:MustNotSendAmend />
+                                    <sp:MustNotSendRenew />
+                                  </wsp:Policy>
+                                </mssp:SslContextToken>
+                              </wsp:Policy>
+                            </sp:ProtectionToken>
+                            <sp:AlgorithmSuite>
+                              <wsp:Policy>
+                                <sp:Basic256 />
+                              </wsp:Policy>
+                            </sp:AlgorithmSuite>
+                            <sp:Layout>
+                              <wsp:Policy>
+                                <sp:Strict />
+                              </wsp:Policy>
+                            </sp:Layout>
+                            <sp:IncludeTimestamp />
+                            <sp:EncryptSignature />
+                            <sp:OnlySignEntireHeadersAndBody />
+                          </wsp:Policy>
+                        </sp:SymmetricBinding>
+                        <sp:EndorsingSupportingTokens>
+                          <wsp:Policy>
+                            <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                              <Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                                <Address xmlns="http://www.w3.org/2005/08/addressing">
+                                  https://localhost/Adatum.SimulatedIssuer/Scenario4/Issue.svc
+                                </Address>
+                              </Issuer>
+                              <sp:RequestSecurityTokenTemplate>
+                                <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+                                  http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey
+                                </trust:KeyType>
+                                <trust:KeySize xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">256</trust:KeySize>
+                                <trust:KeyWrapAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+                                  http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p
+                                </trust:KeyWrapAlgorithm>
+                                <trust:EncryptWith xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+                                  http://www.w3.org/2001/04/xmlenc#aes256-cbc
+                                </trust:EncryptWith>
+                                <trust:SignWith xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+                                  http://www.w3.org/2000/09/xmldsig#hmac-sha1
+                                </trust:SignWith>
+                                <trust:CanonicalizationAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+                                  http://www.w3.org/2001/10/xml-exc-c14n#
+                                </trust:CanonicalizationAlgorithm>
+                                <trust:EncryptionAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+                                  http://www.w3.org/2001/04/xmlenc#aes256-cbc
+                                </trust:EncryptionAlgorithm>
+                              </sp:RequestSecurityTokenTemplate>
+                              <wsp:Policy>
+                                <sp:RequireDerivedKeys />
+                                <sp:RequireInternalReference />
+                              </wsp:Policy>
+                            </sp:IssuedToken>
+                          </wsp:Policy>
+                        </sp:EndorsingSupportingTokens>
+                        <sp:Wss11>
+                          <wsp:Policy>
+                            <sp:MustSupportRefKeyIdentifier />
+                            <sp:MustSupportRefIssuerSerial />
+                            <sp:MustSupportRefThumbprint />
+                            <sp:MustSupportRefEncryptedKey />
+                            <sp:RequireSignatureConfirmation />
+                          </wsp:Policy>
+                        </sp:Wss11>
+                        <sp:Trust13>
+                          <wsp:Policy>
+                            <sp:MustSupportIssuedTokens />
+                            <sp:RequireClientEntropy />
+                            <sp:RequireServerEntropy />
+                          </wsp:Policy>
+                        </sp:Trust13>
+                      </wsp:Policy>
+                    </sp:BootstrapPolicy>
+                    <sp:MustNotSendAmend />
+                  </wsp:Policy>
+                </sp:SecureConversationToken>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+            <sp:EncryptSignature />
+            <sp:OnlySignEntireHeadersAndBody />
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier />
+            <sp:MustSupportRefIssuerSerial />
+            <sp:MustSupportRefThumbprint />
+            <sp:MustSupportRefEncryptedKey />
+          </wsp:Policy>
+        </sp:Wss11>
+        <sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust13>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IOrderTrackingService_GetOrdersFromMyOrganization_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IOrderTrackingService_GetOrdersFromMyOrganization_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IOrderTrackingService_GetOrdersFromMyOrganization_SecurityAccessDeniedExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IOrderTrackingService_GetAllOrders_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IOrderTrackingService_GetAllOrders_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IOrderTrackingService_GetAllOrders_SecurityAccessDeniedExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel.Security" />
+      <xsd:import schemaLocation="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AOrder.OrderTracking.Contracts.Data" />
+      <xsd:import schemaLocation="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import schemaLocation="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOrderTrackingService_GetOrdersFromMyOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersFromMyOrganization" />
+  </wsdl:message>
+  <wsdl:message name="IOrderTrackingService_GetOrdersFromMyOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersFromMyOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderTrackingService_GetOrdersFromMyOrganization_SecurityAccessDeniedExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel.Security" name="detail" element="q1:SecurityAccessDeniedException" />
+  </wsdl:message>
+  <wsdl:message name="IOrderTrackingService_GetAllOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="IOrderTrackingService_GetAllOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderTrackingService_GetAllOrders_SecurityAccessDeniedExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System.ServiceModel.Security" name="detail" element="q2:SecurityAccessDeniedException" />
+  </wsdl:message>
+  <wsdl:portType name="IOrderTrackingService">
+    <wsdl:operation name="GetOrdersFromMyOrganization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderTrackingService/GetOrdersFromMyOrganization" message="tns:IOrderTrackingService_GetOrdersFromMyOrganization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderTrackingService/GetOrdersFromMyOrganizationResponse" message="tns:IOrderTrackingService_GetOrdersFromMyOrganization_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOrderTrackingService/GetOrdersFromMyOrganizationSecurityAccessDeniedExceptionFault" name="SecurityAccessDeniedExceptionFault" message="tns:IOrderTrackingService_GetOrdersFromMyOrganization_SecurityAccessDeniedExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderTrackingService/GetAllOrders" message="tns:IOrderTrackingService_GetAllOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderTrackingService/GetAllOrdersResponse" message="tns:IOrderTrackingService_GetAllOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOrderTrackingService/GetAllOrdersSecurityAccessDeniedExceptionFault" name="SecurityAccessDeniedExceptionFault" message="tns:IOrderTrackingService_GetAllOrders_SecurityAccessDeniedExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS2007FederationHttpBinding_IOrderTrackingService" type="tns:IOrderTrackingService">
+    <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IOrderTrackingService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOrdersFromMyOrganization">
+      <soap12:operation soapAction="http://tempuri.org/IOrderTrackingService/GetOrdersFromMyOrganization" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IOrderTrackingService_GetOrdersFromMyOrganization_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IOrderTrackingService_GetOrdersFromMyOrganization_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SecurityAccessDeniedExceptionFault">
+        <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IOrderTrackingService_GetOrdersFromMyOrganization_SecurityAccessDeniedExceptionFault_Fault" />
+        <soap12:fault use="literal" name="SecurityAccessDeniedExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap12:operation soapAction="http://tempuri.org/IOrderTrackingService/GetAllOrders" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IOrderTrackingService_GetAllOrders_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IOrderTrackingService_GetAllOrders_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SecurityAccessDeniedExceptionFault">
+        <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IOrderTrackingService_GetAllOrders_SecurityAccessDeniedExceptionFault_Fault" />
+        <soap12:fault use="literal" name="SecurityAccessDeniedExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderTrackingService">
+    <wsdl:port name="WS2007FederationHttpBinding_IOrderTrackingService" binding="tns:WS2007FederationHttpBinding_IOrderTrackingService">
+      <soap12:address location="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>
+          http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc
+        </wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <X509Data>
+              <X509Certificate>
+                MIIB5TCCAVKgAwIBAgIQMZCkodF3ebNNbz2T00eeBDAJBgUrDgMCHQUAMBExDzANBgNVBAMTBmFkYXR1bTAeFw0wMDAxMDEwMzAwMDBaFw0zNjAxMDEwMzAwMDBaMBExDzANBgNVBAMTBmFkYXR1bTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA3ECphJdXyrqrri9YbFaf08PlyB1OiqR6knxdMqrCFsxypnTlgB9wG2pSleyTSD8xE+HQZxDjSkFEQk/yXKmUi6miHDq6+lvXgEhaIrpqW1MdDRythP89eowmApQzUS1xuyJOjc/hde6vwG17SO40HLxh6fD8FGd/J5z3PXUuGM0CAwEAAaNGMEQwQgYDVR0BBDswOYAQ6eAwAJ+duKI0U40uPsmY96ETMBExDzANBgNVBAMTBmFkYXR1bYIQMZCkodF3ebNNbz2T00eeBDAJBgUrDgMCHQUAA4GBAL0OSXGaiUZdl+IV9iT4deoxmbyibjBqQl8cwUxiQz1oJeHGjrATqt9cw7+618Bas1qh/2d3wrH+JqwjBlIrzy1at48xDNqf1qcwXxfBezM/PQ4jYFftR1m2lnsxIUrmTmxus9ACobnYW5VusjdyiOJD+Ukyey2pjD/R4LO2B3AO
+              </X509Certificate>
+            </X509Data>
+          </KeyInfo>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="3E864B5C-D855-43e4-B41A-6E054C6C0352"
+           Title="Sample Claims Provider Feature"
+           Scope="Farm"
+           ReceiverAssembly="SampleClaimsProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=29a34e2eb6d55f57"
+           ReceiverClass="SampleClaimsProvider.SampleClaimsProviderReceiver"
+           xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

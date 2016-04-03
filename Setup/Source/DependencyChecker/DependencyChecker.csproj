@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4387C66C-9B6B-4217-AED5-28FA6F9B3051}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DependencyChecker</RootNamespace>
+    <AssemblyName>DependencyChecker</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for DependencyChecker.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for DependencyChecker.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>DependencyChecker.Exe.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Deployment, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Microsoft.Web.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.PlatformInstaller">
+      <HintPath>..\Libs\Microsoft.Web.PlatformInstaller.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AppCmdWrapper.cs" />
+    <Compile Include="Common\CertificateSetupCommand.cs" />
+    <Compile Include="Common\Check.cs" />
+    <Compile Include="Common\CheckEvaluators\CertificateCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\Expressions\PropConjunction.cs" />
+    <Compile Include="Common\CheckEvaluators\MultiCertificateCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\ExpressionCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\Expressions\Expression.cs" />
+    <Compile Include="Common\CheckEvaluators\Expressions\PropLogicLexer.cs" />
+    <Compile Include="Common\CheckEvaluators\Expressions\PropLogicParser.cs" />
+    <Compile Include="Common\CheckEvaluators\Helpers\InstalledHotFixes.cs" />
+    <Compile Include="Common\CheckEvaluators\Helpers\OperatingSystem.cs" />
+    <Compile Include="Common\CheckEvaluators\Helpers\RegistryHelper.cs" />
+    <Compile Include="Common\CheckEvaluators\Helpers\WmiHelper.cs" />
+    <Compile Include="Common\CheckEvaluators\HotFixCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\CodeBasedCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\NotSupportedCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\ProfileCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\RegistryCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\SoftwareCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\WmiCheckEvaluator.cs" />
+    <Compile Include="Common\CheckEvaluators\WpiCheckEvaluator.cs" />
+    <Compile Include="Common\DependenciesInfo.cs" />
+    <Compile Include="Common\Dependency.cs" />
+    <Compile Include="Common\EvaluationContext.cs" />
+    <Compile Include="Common\ICheckEvaluator.cs" />
+    <Compile Include="Common\IEvaluationContext.cs" />
+    <Compile Include="Common\DependenciesInfoBuilder.cs" />
+    <Compile Include="Common\IDependencySetupCommand.cs" />
+    <Compile Include="Common\IRequiresProductManager.cs" />
+    <Compile Include="Common\NotSupportedOperatingSystemException.cs" />
+    <Compile Include="Common\PkgMgrCommand.cs" />
+    <Compile Include="Common\RegisterAspnetCommand.cs" />
+    <Compile Include="Common\Services\ErrorService.cs" />
+    <Compile Include="Common\Services\IErrorService.cs" />
+    <Compile Include="Common\SetupHttpsCommand.cs" />
+    <Compile Include="Common\SetupProfileCommand.cs" />
+    <Compile Include="Common\WpiCommand.cs" />
+    <Compile Include="Configuration\DependenciesSection.cs" />
+    <Compile Include="Configuration\DependencyCheck.cs" />
+    <Compile Include="Configuration\DependencyCheckCollection.cs" />
+    <Compile Include="Configuration\DependencyCheckEvaluator.cs" />
+    <Compile Include="Configuration\DependencyCheckEvaluatorCollection.cs" />
+    <Compile Include="Configuration\DependencyElement.cs" />
+    <Compile Include="Configuration\DependencyElementCollection.cs" />
+    <Compile Include="Configuration\DependencyGroup.cs" />
+    <Compile Include="Configuration\DependencyGroupCollection.cs" />
+    <Compile Include="Configuration\MinimumRequirements.cs" />
+    <Compile Include="Controls\DependencyGroupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DependencyGroupView.Designer.cs">
+      <DependentUpon>DependencyGroupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DependencyViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DependencyViewControl.Designer.cs">
+      <DependentUpon>DependencyViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="InstallingDependency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallingDependency.Designer.cs">
+      <DependentUpon>InstallingDependency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DependencyCheckerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DependencyCheckerForm.Designer.cs">
+      <DependentUpon>DependencyCheckerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\DependencyGroupView.resx">
+      <DependentUpon>DependencyGroupView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DependencyViewControl.resx">
+      <DependentUpon>DependencyViewControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DependencyCheckerForm.resx">
+      <DependentUpon>DependencyCheckerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\..\..\..\Keys\DelaySignKey.snk">
+      <Link>DelaySignKey.snk</Link>
+    </None>
+    <None Include="..\..\DependencyChecker\certs\adatum.pfx">
+      <Link>certs\adatum.pfx</Link>
+    </None>
+    <None Include="..\..\DependencyChecker\certs\fabrikam.pfx">
+      <Link>certs\fabrikam.pfx</Link>
+    </None>
+    <None Include="..\..\DependencyChecker\certs\litware.pfx">
+      <Link>certs\litware.pfx</Link>
+    </None>
+    <None Include="..\..\DependencyChecker\certs\localhost.pfx">
+      <Link>certs\localhost.pfx</Link>
+    </None>
+    <None Include="..\..\DependencyChecker\certs\root.cer">
+      <Link>certs\root.cer</Link>
+    </None>
+    <None Include="post-build-script\updateSetupFolder.cmd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WorkingSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingSplash.Designer.cs">
+      <DependentUpon>WorkingSplash.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista-clean24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapsed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expanded.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green ball_tiny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red ball_tiny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallingDependency.resx">
+      <DependentUpon>InstallingDependency.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingSplash.resx">
+      <DependentUpon>WorkingSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="DependencyChecker.Exe.manifest" />
+    <None Include="Resources\Vista-error24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\questionmark.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>rem "post-build-script\updateSetupFolder.cmd" "$(TargetDir)" "$(ProjectDir)..\..\DependencyChecker\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

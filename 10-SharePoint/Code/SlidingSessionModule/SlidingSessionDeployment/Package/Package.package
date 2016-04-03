@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="179877e8-bdba-4a0f-87c1-e818bf6b8a2a" solutionId="179877e8-bdba-4a0f-87c1-e818bf6b8a2a" resetWebServer="false" name="SlidingSessionDeployment" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="SlidingSessionModule.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\SlidingSessionModule\SlidingSessionModule.csproj" />
+  </assemblies>
+</package>

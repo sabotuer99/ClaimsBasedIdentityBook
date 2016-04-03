@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfOrganization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Organization>
+    <LogoPath>~/Content/images/adatum-logo.png</LogoPath>
+    <Name>adatum</Name>
+    <DisplayName>Adatum</DisplayName>
+    <HomeRealm>https://localhost/Adatum.SimulatedIssuer.7/</HomeRealm>
+  </Organization>
+  <Organization>
+    <LogoPath>~/Content/images/litware-logo.png</LogoPath>
+    <Name>litware</Name>
+    <DisplayName>Litware</DisplayName>
+    <HomeRealm>https://localhost/Litware.SimulatedIssuer.7/</HomeRealm>
+  </Organization>
+  <Organization>
+    <LogoPath>~/Content/images/contoso-logo.png</LogoPath>
+    <Name>contoso</Name>
+    <DisplayName>Contoso</DisplayName>
+    <HomeRealm>uri:WindowsLiveID</HomeRealm>
+  </Organization>  
+</ArrayOfOrganization>

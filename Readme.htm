@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Claims based Authentication and Authorization Guide - Readme</title>
+    <link rel="stylesheet" href="readme_files/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="readme_files/styles/mnp.css" type="text/css" />
+    <style type="text/css">
+
+ p.MsoNormal
+  {margin-bottom:.0001pt;
+  font-size:11.0pt;
+  font-family:"Calibri","sans-serif";
+          margin-left: 0in;
+            margin-right: 0in;
+            margin-top: 0in;
+        }
+    </style>
+</head>
+<body>
+    <a name="top"></a>
+    <div id="commonWrapper">
+        <div id="pageWrapper">
+            <!--   START HEADER   -->
+            <div class="page_header">
+                <div class="page_header_logo">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="Readme.htm">
+                                    <div class="page_header_title">
+                                        A Guide to Claims-based Identity and Access Control (2.0)</div>
+                                </a>
+                                <div class="page_header_subtitle">
+                                    About the Examples</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--   END HEADER   -->
+            <div id="Main">
+                <div id="MainMid">
+                    <!-- START NAVIGATION BAR -->
+                    <div id="TopNavigation">
+                        <div class="topnav_item" id="topnav1">
+                            <a tabindex="1" href="Readme.htm"><span class="topnav_item_left_selected"></span><span
+                                class="topnav_item_middle_selected"><span class="topnav_item_text">Readme</span>
+                            </span><span class="topnav_item_right_selected"></span></a>
+                            <a tabindex="1" href="ReleaseNotes.htm"><span class="topnav_item_left"></span><span
+                                class="topnav_item_middle"><span class="topnav_item_text">Release notes</span>
+                            </span><span class="topnav_item_right"></span></a>
+                        </div>
+                        <div class="topnav_item_divider">
+                        </div>
+                    </div>
+                    <!-- END NAVIGATION BAR -->
+                    <div id="Content">
+                        <div class="content_table_home">
+                            <div class="homePgImgWide">
+                                <div class="homearea">
+                                    <div class="pageTitle">
+                                        <div class="maintitle">
+                                            Examples Summary</div>
+                                    </div>
+                                    <div class="newpromo">
+                                        <a href="http://msdn.microsoft.com/practices">
+                                            <img src="readme_files/images/pnp_logo.gif" alt="Microsoft Patterns & Practices" />
+                                        </a>
+                                    </div>
+                                    <div class="content_header_text">
+
+<p>This document describes the examples that illustrate the scenarios described in the book
+<i>A Guide to Claims-based Identity and Access Control (2.0)</i> (see <a href="http://claimsid.codeplex.com/" target="_blank">http://claimsid.codeplex.com/</a>).
+Each example is a Microsoft Visual Studio 2010 project that you can compile and run. For information
+about running each example, and the known issues and options available, see the <a href="ReleaseNotes.htm">Release Notes</a>.</p>
+
+<p>&nbsp;</p><hr /><p>&nbsp;</p>
+
+<p><b>Before you start</b></p>
+<p>&nbsp;</p>
+<p>To check for software prerequisites needed to use the examples, run <b>
+CheckDependencies.cmd</b> in the example scenarios folder. You must have
+<a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&amp;displaylang=en">
+.NET Framework version 4.0</a> installed to run the Dependency Checker.</p>
+<p>&nbsp;</p>
+<p><b>NOTE</b>: <i>If you want to install the Windows Azure Tools on Windows Vista or Windows Server 2008 R2 you must install
+.NET Framework version 3.5.1 before you run the CheckDependencies.cmd batch file. The .NET Framework version 3.5.1 can be installed
+as a Feature using Windows Server Manager.</i></p>
+<p>&nbsp;</p>
+<p> The CheckDependencies.cmd batch file launches a dependency checking tool that reports any components
+missing on your system, and provides links to obtain, install, and configure
+these missing components. Not all of examples require all of the components to run, but they do all require
+Windows Identity Foundation and IIS.</p>
+<p>&nbsp;</p>
+<p><b>NOTE</b>: <i>Scenario 9 requires the Windows Phone 7 Developer Tools. This scenario has not been tested on Windows
+Server 2008 or Windows Server 2008 R2 because the tools require Windows Vista or Windows 7.</i></p>
+<p>&nbsp;</p>
+<p>Some infrastructure is shared by all of the examples, and everything that is not specific to identity
+has been simulated for simplicity. For example, there are no bindings to databases in any of the examples.
+In addition, all of the examples use simulated security token issuers to mimic the behavior of a production
+issuer for the fictitious companies that participate in the scenarios. The goal was to simplify the deployment
+experience and make it possible to run the example applications on a single development machine.
+For production applications, it is recommended that you use ADFS V2.0.</p>
+<p>&nbsp;</p>
+<p>Cryptographic certificates required by the examples are automatically created
+for you by the Dependency Checking tool. By default, these use the SHA-1
+signature hashing algorithm. For production environments, you should consider
+using SHA-2. The samples also install a certificate for localhost that trusts a
+certificate named <b>RootAgency</b>. This is to avoid a certificate warning being shown
+in the browser each time you run the examples. You should remove these certificates from
+your computer after you have finished using the examples.</p>
+<p>&nbsp;</p>
+<p>You will need a Windows Live or Google account to work with the
+examples that use ACS.</p>
+
+<p>&nbsp;</p><hr /><p>&nbsp;</p>
+
+<p><b>About The Examples</b></p>
+<p>&nbsp;</p>
+
+<p><b>1 - Single Sign On</b></p>
+<p>This is the most basic example. It includes two Web applications that
+have been updated to use claims, with before and after versions provided. It
+includes a claims issuer. The example's Web applications are based on ASP.NET Web
+Forms.</p>
+<p>&nbsp;</p>
+
+<p><b>2 - Federation</b></p>
+<p>This example extends Example 1 (Single Sign On) to show federated identity across security
+realms. It introduces the concepts of identity and federation providers. It
+shows some of the basic concepts of manual home realm discovery and claims transformation.</p>
+<p>&nbsp;</p>
+
+<p><b>3 - Federation With Multiple Partners</b></p>
+<p>This is a more advanced federation example. It was developed with the ASP.NET
+MVC framework. It demonstrates federated identity across multiple security
+realms, automated home realm discovery, and more complex claims transformation.</p>
+<p>&nbsp;</p>
+
+<p><b>4 - Active Client Federation</b></p>
+<p>This example demonstrates federated identity across security realms in the context of WCF Web services.</p>
+<p>&nbsp;</p>
+
+<p><b>5 - Windows Azure</b></p>
+<p>This example shows how to host Example 1 (Single Sign On) in Windows Azure.</p>
+<p>&nbsp;</p>
+
+<p><b>6 - Federation And ACS</b></p>
+<p>This example shows how to use federated identity across security realms with ACS. It extends Example 2 (Federation) to use ACS.</p>
+<p>&nbsp;</p>
+
+<p><b>7 - Federation With Multiple Partners And ACS</b></p>
+<p>This example shows how to use federated identity across security
+realms with multiple partners using ACS. It extends Example 3 (Federation With Multiple Partners) to use ACS.</p>
+<p>&nbsp;</p>
+
+<p><b>8 - Active REST Client Federation</b></p>
+<p>This example shows how to use ACS to secure a REST endpoint using an active
+client. It extends Example 4 (Active Client Federation) to use ACS and a REST endpoint.</p>
+<p>&nbsp;</p>
+
+<p><b>9 - Windows Phone Client Federation</b></p>
+<p>This example shows how to use claims and ACS to secure a REST endpoint for a
+Windows Phone 7 device. </p>
+<p>&nbsp;</p>
+
+<p>Throughout the examples you will see blue information icons on the Web pages that
+they display. If you position the mouse over these icons, you will see additional
+information about what is happening behind the scenes:</p>
+<p>&nbsp;</p><p><img src="readme_files\images\readme-image.png" width="408" height="332"/></p><p>&nbsp;</p>
+
+                  </div>
+                                    <br />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footerstrip">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</body>
+</html>

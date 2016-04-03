@@ -1,0 +1,4 @@
+﻿<%@ServiceHost  
+    Language="C#"
+    Factory="Microsoft.IdentityModel.Protocols.WSTrust.WSTrustServiceHostFactory" 
+    Service="Litware.SimulatedIssuer.IdentityProviderSecurityTokenServiceConfiguration" %>

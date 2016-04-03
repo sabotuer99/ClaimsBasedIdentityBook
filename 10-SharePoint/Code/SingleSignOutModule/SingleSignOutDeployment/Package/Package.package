@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="40f4a7a2-6c3b-4a50-847e-7b1cbcde0a79" solutionId="40f4a7a2-6c3b-4a50-847e-7b1cbcde0a79" resetWebServer="false" name="SingleSignOutModuleDeployment" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="SingleSignOutModule.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\SingleSignOutModule\SingleSignOutModule.csproj" />
+  </assemblies>
+</package>

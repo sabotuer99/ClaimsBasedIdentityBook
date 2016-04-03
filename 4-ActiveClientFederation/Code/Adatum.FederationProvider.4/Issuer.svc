@@ -1,0 +1,4 @@
+﻿<%@ServiceHost  
+    Language="C#"
+    Factory="Microsoft.IdentityModel.Protocols.WSTrust.WSTrustServiceHostFactory, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+    Service="Adatum.FederationProvider.FederationSecurityTokenServiceConfiguration" %>

@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AOrder.Site" %>
+<%@ Register assembly="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="Microsoft.IdentityModel.Web.Controls" tagprefix="idfx" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="MasterHead" runat="server">
+    <title>Adatum a-Order</title>
+    <link href="Styles.css" type="text/css" rel="Stylesheet" media="screen" />
+    <asp:ContentPlaceholder id="HeadPlaceholder" runat="server">
+    </asp:ContentPlaceholder>
+</head>
+<body>
+    <form id="MasterForm" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div id="container">
+    
+        <div id="header">
+            <div id="logo">
+                <a href="http://localhost/adatum.portal/">
+                    <img src="Styling/Images/adatum-logo.png" alt="Adatum logo" />
+                </a>
+            </div>
+            <div id="sitetitle">
+                a-Order
+            </div>
+            <%
+                if (this.Context.User.Identity.IsAuthenticated)
+                {%>
+            <div id="topuserinformation">
+                    Logged in as: <i><%=this.Context.User.Identity.Name%></i>
+                    <samples:TooltipInformation ID="TooltipInformation2" runat="server" Text="<%$ Resources:TooltipText, LoggedUsernameHint %>" />  |  
+                    <idfx:FederatedPassiveSignInStatus ID="FederatedPassiveSignInStatus" runat="server" 
+                        OnSignedOut="OnFederatedPassiveSignInStatusSignedOut" SignOutText="Logout" FederatedPassiveSignOut="true" SignOutAction="FederatedPassiveSignOut" />
+                    <samples:TooltipInformation ID="TooltipInformation3" runat="server" Text="<%$ Resources:TooltipText, SingleSignOutHint %>" />
+            </div>
+            <div id="topnavigation">
+                <a href="Default.aspx">Orders</a>
+            </div>
+            <%
+                }%>
+        </div>
+    
+        <div id="content">
+            <asp:ContentPlaceholder id="ContentPlaceholder" runat="server">
+            </asp:ContentPlaceholder>
+        </div>
+        
+        <div id="footer">
+            Sites in Adatum <samples:TooltipInformation ID="TooltipInformation1" runat="server" Text="<%$ Resources:TooltipText, SSOExperienceHint %>" />: 
+            <a href="https://localhost/a-Expense.ClaimsAware/">a-Expense (claims aware)</a>  |  
+            <a href="https://localhost/a-Order.ClaimsAware/">a-Order (claims aware)</a>
+        </div>
+        
+    </div>
+    </form>
+</body>
+</html>

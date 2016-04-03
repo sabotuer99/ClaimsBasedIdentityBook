@@ -1,0 +1,139 @@
+<EntityDescriptor wsu:Id="49d8edee-77db-4c14-b477-35a7f46820a3" entityID="https://localhost/Adatum.SimulatedIssuer/" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <Organization>
+    <OrganizationDisplayName xml:lang="">Adatum</OrganizationDisplayName>
+    <OrganizationName xml:lang="">Adatum</OrganizationName>
+    <OrganizationURL xml:lang="">
+      http://localhost/Adatum.Portal/
+    </OrganizationURL>
+  </Organization>
+  <ContactPerson contactType="administrative">
+    <Company>Adatum</Company>
+    <GivenName>contact</GivenName>
+    <SurName>name</SurName>
+    <EmailAddress>
+      contactname@adatum.com
+    </EmailAddress>
+    <TelephoneNumber>555-5555</TelephoneNumber>
+  </ContactPerson>
+  <RoleDescriptor xsi:type="fed:SecurityTokenServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/wsfed/federation/200706" ServiceDescription="Adatum Simulated Issuer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIB5TCCAVKgAwIBAgIQMZCkodF3ebNNbz2T00eeBDAJBgUrDgMCHQUAMBExDzANBgNVBAMTBmFkYXR1bTAeFw0wMDAxMDEwMzAwMDBaFw0zNjAxMDEwMzAwMDBaMBExDzANBgNVBAMTBmFkYXR1bTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA3ECphJdXyrqrri9YbFaf08PlyB1OiqR6knxdMqrCFsxypnTlgB9wG2pSleyTSD8xE+HQZxDjSkFEQk/yXKmUi6miHDq6+lvXgEhaIrpqW1MdDRythP89eowmApQzUS1xuyJOjc/hde6vwG17SO40HLxh6fD8FGd/J5z3PXUuGM0CAwEAAaNGMEQwQgYDVR0BBDswOYAQ6eAwAJ+duKI0U40uPsmY96ETMBExDzANBgNVBAMTBmFkYXR1bYIQMZCkodF3ebNNbz2T00eeBDAJBgUrDgMCHQUAA4GBAL0OSXGaiUZdl+IV9iT4deoxmbyibjBqQl8cwUxiQz1oJeHGjrATqt9cw7+618Bas1qh/2d3wrH+JqwjBlIrzy1at48xDNqf1qcwXxfBezM/PQ4jYFftR1m2lnsxIUrmTmxus9ACobnYW5VusjdyiOJD+Ukyey2pjD/R4LO2B3AO
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <fed:ClaimTypesOffered>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Name</auth:DisplayName>
+        <auth:Description>
+          The name of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>GivenName</auth:DisplayName>
+        <auth:Description>
+          The given name of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Surname</auth:DisplayName>
+        <auth:Description>
+          The surname of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>StreetAddress</auth:DisplayName>
+        <auth:Description>
+          The street address of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>StateOrProvince</auth:DisplayName>
+        <auth:Description>
+          The state or province of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Country</auth:DisplayName>
+        <auth:Description>
+          The country of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.adatum.com/claims/2009/08/costcenter" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>CostCenter</auth:DisplayName>
+        <auth:Description>
+          The cost center of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Role</auth:DisplayName>
+        <auth:Description>
+          The role of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/claims/group" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Group</auth:DisplayName>
+        <auth:Description>
+          The group of the subject.
+        </auth:Description>
+      </auth:ClaimType>
+    </fed:ClaimTypesOffered>
+    <fed:TokenTypesOffered>
+      <fed:TokenType Uri="urn:oasis:names:tc:SAML:1.0:assertion" />
+    </fed:TokenTypesOffered>
+    <fed:SecurityTokenServiceEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>
+          https://localhost/Adatum.SimulatedIssuer/Scenario4-WebServices/Issue.svc
+        </Address>
+        <Metadata>
+          <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsx:MetadataSection Dialect="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns="">
+              <wsx:MetadataReference>
+                <Address xmlns="http://www.w3.org/2005/08/addressing">
+                  https://localhost/Adatum.SimulatedIssuer/Scenario4-WebServices/Issue.svc/mex
+                </Address>
+              </wsx:MetadataReference>
+            </wsx:MetadataSection>
+          </Metadata>
+        </Metadata>
+      </EndpointReference>
+    </fed:SecurityTokenServiceEndpoint>
+    <fed:PassiveRequestorEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>
+          https://localhost/Adatum.SimulatedIssuer/
+        </Address>
+      </EndpointReference>
+    </fed:PassiveRequestorEndpoint>
+  </RoleDescriptor>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <ds:SignedInfo>
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <ds:Reference URI="#49d8edee-77db-4c14-b477-35a7f46820a3">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+          <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <ds:DigestValue>
+          H+KZjrT4GmHeil2syQZsZ3385MQ=
+        </ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue>
+      zKJwVh76uvpd7PnUMfhnY5QganhKRKJoesO058fUU+8NWyqXeBGTCP83EOx16XuWuYVcNPv8PYKV0cp6GADcSgbWKNPgph5Llhqx0UtTeQ2hawk+VKMpChRwRO2aH430v/vfpGAiPS7GcIRd3HAnQPelsDxFYyP9QdtdXzguyJk=
+    </ds:SignatureValue>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <X509Data>
+        <X509Certificate>
+          MIIB5TCCAVKgAwIBAgIQMZCkodF3ebNNbz2T00eeBDAJBgUrDgMCHQUAMBExDzANBgNVBAMTBmFkYXR1bTAeFw0wMDAxMDEwMzAwMDBaFw0zNjAxMDEwMzAwMDBaMBExDzANBgNVBAMTBmFkYXR1bTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA3ECphJdXyrqrri9YbFaf08PlyB1OiqR6knxdMqrCFsxypnTlgB9wG2pSleyTSD8xE+HQZxDjSkFEQk/yXKmUi6miHDq6+lvXgEhaIrpqW1MdDRythP89eowmApQzUS1xuyJOjc/hde6vwG17SO40HLxh6fD8FGd/J5z3PXUuGM0CAwEAAaNGMEQwQgYDVR0BBDswOYAQ6eAwAJ+duKI0U40uPsmY96ETMBExDzANBgNVBAMTBmFkYXR1bYIQMZCkodF3ebNNbz2T00eeBDAJBgUrDgMCHQUAA4GBAL0OSXGaiUZdl+IV9iT4deoxmbyibjBqQl8cwUxiQz1oJeHGjrATqt9cw7+618Bas1qh/2d3wrH+JqwjBlIrzy1at48xDNqf1qcwXxfBezM/PQ4jYFftR1m2lnsxIUrmTmxus9ACobnYW5VusjdyiOJD+Ukyey2pjD/R4LO2B3AO
+        </X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </ds:Signature>
+</EntityDescriptor>

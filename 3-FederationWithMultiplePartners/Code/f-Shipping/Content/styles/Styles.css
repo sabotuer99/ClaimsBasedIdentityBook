@@ -1,0 +1,294 @@
+﻿/************ All site ************/
+*
+{
+    font-family: Tahoma, Sans-Serif;
+    font-size: large;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
+
+#header
+{
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background: #ffffff url(../images/header-background.png) repeat-y scroll right;
+	height: 105px;
+	margin: 0;
+	padding: 0;
+}
+
+#container
+{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 20px 20px;
+}
+
+#tenantlogo
+{
+    float: left;
+}
+#tenantlogo img
+{
+    height: 100px;
+    width: 150px;
+    border: 0 none;
+}
+
+#fabrikamshippinglogo
+{
+	margin-top: 15px;
+    float: right;
+}
+#fabrikamshipping img
+{
+    height: 70px;
+    width: 215px;
+    border: 0 none;
+}
+
+#topuserinformation
+{
+	clear: both;
+    float: right;
+}
+
+#topnavigation
+{
+    clear: both;
+    padding-top: 10px;
+}
+#topnavigation ul.nav-categories
+{
+	margin:0;
+	padding:0;
+	top: 1px;
+	position: relative;
+}
+#topnavigation ul.nav-categories li
+{
+	float:left;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+#topnavigation ul.nav-categories li a
+{
+	display: block;
+	border-top: solid 1px #006600;
+	border-left: solid 1px #006600;
+	border-right: solid 1px #006600;
+    padding:6px 10px;
+    background-color:#006600;
+	color:#cccccc;
+	text-decoration:none !important;
+}
+#topnavigation ul.nav-categories li a.selected
+{
+	background-color:#e5ffe5;
+	color:#000000;	
+}
+#navigationTabs
+{
+	clear: left;
+	padding:0;
+	height: 20px;
+}
+#navigationTabs div
+{
+	display: block;
+    background-color:#e5ffe5;
+	color:#000000;
+	border: solid 1px #006600;
+	padding:6px 0px 6px 0px;
+}
+#navigationTabs div a
+{
+    padding:8px 5px 8px 5px;
+}
+
+#content
+{
+    clear: both;
+    padding-top: 30px;
+}
+
+
+/************ Shipment list ************/
+#shipmentlist
+{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#shipmentlist th
+{
+	background-color: #CEE5CE;
+}
+#shipmentlist th, td
+{
+    padding: 5px 5px 5px 5px;
+}
+#shipmentlist .cancel-shipment
+{
+    display: inline;
+    font-size: medium;
+    border-style: none;
+    background-color: Transparent;
+    color: Blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/************ Claim mappings ************/
+#newmapping
+{
+    width: 550px;
+    border: solid 1px;
+    border-collapse:collapse;
+    margin-bottom: 10px;
+    float: left;
+    padding: 5px;
+}
+#newmapping-title
+{
+    font-weight: bold;
+    margin-bottom:10px;
+}
+.newmapping-claim
+{
+	padding-bottom: 20px;
+}
+.newmapping-claim label
+{
+	display: block;
+	padding-top: 10px;
+}
+.newmapping-claim-title
+{
+	display: block;
+	font-style: italic;
+}
+.newmapping-claim-field
+{
+	display: block;
+	margin-left: 15px;
+}
+
+#claimmappings
+{
+    border: solid 1px;
+    border-collapse:collapse;
+    width: 600px;
+    margin-bottom: 40px;
+}
+#claimmappings th
+{
+	background-color: #cee5ce;
+}
+#claimmappings th, td
+{
+    padding: 5px 5px 5px 5px;
+}
+#claimmappings ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 20px;
+}
+
+
+/************ Join now ************/
+.sampleform
+{
+	border: solid 1px #e6e6e6;
+	background-color: #fcfcfc;
+}
+
+#samplefile
+{
+	float:right;
+	margin-right: 20px;
+}
+#samplefile a
+{
+	font-size: small;
+}
+
+
+/************ Federation metadata ************/
+.sectionexplanationcontainer
+{
+	border: solid 1px #e6e6e6;
+	margin-top: 50px;
+}
+.sectionexplanationcontainer .titlesection
+{
+	border: outset 1px #e6e6e6;
+	background-color: white;
+	font-size: large;
+	position: relative;
+	top: -15px;
+	left: 10px;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 5px 5px 5px;
+}
+.sectionexplanationcontainer .explanationsection
+{
+	display:block;
+	background-color: white;
+	padding: 0px 10px 10px 10px;
+}
+.sectionexplanationcontainer .xmlsection
+{
+	display:block;
+	background-color: #fcfcfc;
+	padding: 10px 10px 10px 10px;
+	border-top: solid 1px #e6e6e6;
+}
+.sectionexplanationcontainer .xmlsection,
+.xmlsection *
+{
+	white-space:pre;
+	font-family:Courier;
+}
+.xmlsection .highlight
+{
+	background: #ffff00;
+}
+
+
+/************ Home ************/
+#configured-tenants ul.tenants-list
+{
+	list-style:none none inside;
+}
+#configured-tenants ul.tenants-list li
+{
+	display: table-row;
+}
+#configured-tenants .configured-tenant-logo
+{
+	float: left;
+}
+#configured-tenants .configured-tenant-logo img
+{
+	height: 100px;
+    width: 150px;
+    border: 0px none;	
+    margin: 0px;
+}
+
+#configured-tenants .configured-tenant-description
+{
+	float:left; 
+	margin-left: 20px; 
+	padding-top: 25px;
+	width: 400px;
+}

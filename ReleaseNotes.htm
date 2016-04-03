@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Claims based Authentication and Authorization Guide - Release Notes</title>
+    <link rel="stylesheet" href="readme_files/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="readme_files/styles/mnp.css" type="text/css" />
+    <style type="text/css">
+
+ p.MsoNormal
+  {margin-bottom:.0001pt;
+  font-size:11.0pt;
+  font-family:"Calibri","sans-serif";
+          margin-left: 0in;
+            margin-right: 0in;
+            margin-top: 0in;
+        }
+    .auto-style1 {
+  color: #1155A8;
+}
+    </style>
+</head>
+<body>
+    <a name="top"></a>
+    <div id="commonWrapper">
+        <div id="pageWrapper">
+            <!--   START HEADER   -->
+            <div class="page_header">
+                <div class="page_header_logo">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="Readme.htm">
+                                    <div class="page_header_title">
+                                        A Guide to Claims-based Identity and Access Control (2.0)</div>
+                                </a>
+                                <div class="page_header_subtitle">
+                                    Release Notes</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--   END HEADER   -->
+            <div id="Main">
+                <div id="MainMid">
+                    <!-- START NAVIGATION BAR -->
+                    <div id="TopNavigation">
+                        <div class="topnav_item" id="topnav1">
+                            <a tabindex="1" href="Readme.htm"><span class="topnav_item_left"></span><span
+                                class="topnav_item_middle"><span class="topnav_item_text">Readme</span>
+                            </span><span class="topnav_item_right_selected"></span></a>
+                            <a tabindex="1" href="ReleaseNotes.htm"><span class="topnav_item_selected"></span><span
+                                class="topnav_item_middle_selected"><span class="topnav_item_text">Release notes</span>
+                            </span><span class="topnav_item_right"></span></a>
+                        </div>
+                        <div class="topnav_item_divider">
+                        </div>
+                    </div>
+                    <!-- END NAVIGATION BAR -->
+                    <div id="Content">
+                        <div class="content_table_home">
+                            <div class="homePgImgWide">
+                                <div class="homearea">
+                                    <div class="pageTitle">
+                                        <div class="maintitle">
+                                            Release notes for the .NET 4.0 version of the examples</div>
+                                    </div>
+                                    <div class="newpromo">
+                                        <a href="http://msdn.microsoft.com/practices">
+                                            <img src="readme_files/images/pnp_logo.gif" alt="Microsoft Patterns & Practices" />
+                                        </a>
+                                    </div>
+                                    <div class="content_header_text">
+<p><b>System Requirements</b></p>
+<p>&nbsp;</p>
+<ul>
+  <li>Microsoft Windows Vista, Windows 7, or Windows Server 2008 R2 (32 bit or 64 bit)</li>
+  <li>Microsoft .NET Framework version 4.0</li>
+  <li>Microsoft Visual Studio 2010 Ultimate, Premium, or Professional edition</li>
+</ul>
+<p><b>NOTE</b>: If you want to install the Windows Azure Tools on Windows Vista or Windows Server 2008 R2 you must first install the .NET Framework version 3.5.1. This is available as a Feature in Windows Server Manager</p>
+<p>&nbsp;</p>
+<p><b>Known Issues When Running the Examples</b></p>
+<p>&nbsp;</p>
+<p>Examples <b>4-ActiveClientFederation</b> and <b>8-ActiveRestClientFederation</b> may stop and display the <b>Attach Security Warning</b> dialog in Visual Studio when you click the Logon button.
+This dialog may not be displayed in the foreground. When you click <b>Attach</b> in this dialog, the example will continue to run.</p>
+<p>&nbsp;</p>
+<p>Example <b>5-WindowsAzure</b> may display the message &quot;Windows Azure Tools: Warning: Development Fabric SSL certificate not installed. Attempting to install.&quot;
+in the Output window when you first run it under the local DevFabric.</p>
+<p>&nbsp;</p>
+<p>Example <b>7-FederationWithMultiplePartnersAndAcs</b> allows you to enrol new partners, but this is only possible if you create your own namespace in ACS as it requires access to the management key.
+To create your own namespace and modify the example to allow new partners to be enrolled, follow
+the instructions in the ACS section of this document.</p>
+<p>&nbsp;</p>
+<p>Example <b>9-WindowsPhoneClientFederation</b> requires the <a href="http://create.msdn.com/en-us/resources/downloads" target="_blank">Windows Phone Developer Tools</a>
+and all associated updates to be installed. If you are not using a real device, ensure that you select Windows Phone Emulator as the deployment target before running the example.
+See "Default Deployment Target" in the <a href="http://download.microsoft.com/download/6/D/6/6D66958D-891B-4C0E-BC32-2DFC41917B11/Release%20Notes%20-%20January%202011%20Update.htm" target="_blank">release notes</a>
+for the January 2011 Update of the Windows Phone Developer Tools for details of
+how to reset the default deployment target. </p>
+
+<p>&nbsp;</p><hr /><p>&nbsp;</p>
+
+<p><b>Required configuration changes for IIS, DevFabric, and Windows Azure</b></p>
+<p>&nbsp;</p>
+<p>Examples <b>1-SingleSignOn</b> and <b>5-WindowsAzure</b> use the <b>a-expense.ClaimsAware</b> project. By default these examples are configured to run hosted within IIS.
+However, the example <b>5-WindowsAzure</b> will run in a different environment (such as the local DevFabric or Windows Azure). Notes about the
+configuration requirements and changes required to the <b>microsoft.identityModel</b> section of the configuration for running in different hosted environments
+are included at the start of the <b>web.config</b> file the <b>a-expense.ClaimsAware.5</b> project.</p>
+
+<p>&nbsp;</p><hr /><p>&nbsp;</p>
+
+<p><strong>WIF Certificate Validation</strong></p>
+<p>&nbsp;</p>
+<p>The code we provide uses a self-signed certificate, and so certificate validation is set to <b>None</b> in the web.config files.
+When you create your own project with a signed certificate from a certificate authority, you can remove this line from web.config
+because the default (PeerOrChainTrust) will work with this type of certificate.
+<p>&nbsp;</p>
+<p><b>web.config</b></p>
+<pre>&lt;certificateValidation certificateValidationMode="None" /&gt;</pre>
+<p>&nbsp;</p>
+<p>For more information about certificate validation see
+<a href="http://msdn.microsoft.com/en-us/library/c35cce27-14df-43e4-853b-680cfa73e0dd#BKMK_certificateValidation"
+target="_blank">Security Token Handler Collection Configuration</a>.</p>
+<p>&nbsp;</p><hr /><p>&nbsp;</p>
+
+<p><b>Cookies encrypted using RSA</b></p>
+<p>&nbsp;</p>
+<p>As mentioned in the guide, the federation cookies are now encrypted using an RSA algorithm. This allows the example sites to run in a
+WebFarm environment. This change affects the following source code from the previous release:</p>
+<p>&nbsp;</p>
+<p><b>global.asax.cs</b></p>
+<pre>protected void Application_Start()
+{
+  FederatedAuthentication.ServiceConfigurationCreated += this.OnServiceConfigurationCreated;
+  ...
+}
+
+private void OnServiceConfigurationCreated(object sender, ServiceConfigurationCreatedEventArgs e)
+{
+  List&lt;CookieTransform&gt; sessionTransforms = new List&lt;CookieTransform&gt;(new CookieTransform[]
+    {
+      new DeflateCookieTransform(),
+      new RsaEncryptionCookieTransform(e.ServiceConfiguration.ServiceCertificate),
+      new RsaSignatureCookieTransform(e.ServiceConfiguration.ServiceCertificate)
+    });
+  SessionSecurityTokenHandler sessionHandler = new SessionSecurityTokenHandler(
+                                                   sessionTransforms.AsReadOnly());
+  e.ServiceConfiguration.SecurityTokenHandlers.AddOrReplace(sessionHandler);
+}
+</pre>
+<p><b>web.config</b></p>
+<pre>&lt;configuration&gt;
+  ...
+  &lt;microsoft.identityModel&gt;
+    ...
+    &lt;service&gt;
+      ...
+      &lt;serviceCertificate&gt;
+        &lt;certificateReference x509FindType=&quot;FindBySubjectDistinguishedName&quot; findValue=&quot;CN=localhost&quot;/&gt;
+      &lt;/serviceCertificate&gt;
+    &lt;/service&gt;
+  &lt;/microsoft.identityModel&gt;
+&lt;/configuration&gt;</pre>
+
+<hr /><p>&nbsp;</p>
+
+<p><b>Request validation in ASP.NET 4</b></p>
+<p>&nbsp;</p>
+<p>By default ASP.NET validates all POST requests to a web application to check for dangerous input, such as XML that is not encoded.
+A token is an XML document that is not encoded. To avoid an exception when the token is posted, the examples include a class named <b>WsFederationRequestValidator</b>
+that checks if the input is a token. If it is, the class returns true and allows the request to continue. If not, the usual &quot;potentially dangerous
+Request.Form value was detected&quot; exception is thrown.</p>
+<p>&nbsp;</p>
+<p>The <b>WsFederationRequestValidator</b> class is enabled in the following section of the <b>web.config</b> file:</p>
+<pre>&lt;system.web&gt;
+  &lt;httpRuntime requestValidationType=&quot;WsFederationRequestValidator&quot; /&gt;
+&lt;/system.web&gt;</pre>
+
+<hr /><p>&nbsp;</p>
+
+<p><b>Dependency Checker</b></p>
+<p>&nbsp;</p>
+<p>When running the Dependency Checker, you must install
+the certificates before setting up IIS for HTTPS.</p>
+<p>&nbsp;</p>
+<p>If you have any previous versions of the examples for this series of guides (&quot;Guide to Claims-based
+Identity Version 1&quot;, &quot;Moving Applications to the Cloud&quot;, &quot;Developing
+Applications for the Cloud&quot;, or the related Hands on Labs) you may need to
+remove the installed certificates and websites in order to run the examples.</p>
+                    <p>&nbsp;</p>
+<p>The Dependency Checker may report that IIS is not installed, even though it is installed.
+We recommend using the Web Platform Installer to install and configure IIS with the
+recommended configuration. The Dependency Checker confirms only this configuration.</p>
+
+<p>&nbsp;</p><hr /><p>&nbsp;</p>
+
+<p><b>Access Control Service Examples</b></p>
+<p>&nbsp;</p>
+<p>The examples we ship run against a preconfigured account in the ACS portal. If you want to
+create your own account, please visit <a href="http://windows.azure.com">http://<span class="auto-style1">windows.azure.com</span></a>.</p>
+<p>&nbsp;</p>
+<p><strong>ACS and Single Sign Out</strong></p>
+<p>When using single sign-out for scenario 6 you will not see a logout confirmation image from ACS. Even though the logout request is sent
+to ACS, it does not return a logged-out confirmation image.</p>
+<p>&nbsp;</p>
+<p><strong>Setting up a Namespace in ACS for Scenarios 6, 8, and 9</strong></p>
+<p>If you want to set up your own namespace for these scenarios, follow these steps:</p>
+<p>&nbsp;</p>
+<p><b>1 - Create an ACS namespace</b></p>
+<ol>
+<li style="font-weight:normal">Go to <a href="http://windows.azure.com">http://<span class="auto-style1">windows.azure.com</span></a>. You will need a Windows Live ID to log in.</li>
+<li style="font-weight:normal">Create a new Access Control Service Namespace.</li>
+<li style="font-weight:normal">Click the button to manage the new namespace once it has been created.</li>
+<li style="font-weight:normal">Click Identity Providers and click Add.</li>
+<li style="font-weight:normal">Select Windows Live ID, Google, and Yahoo. Then click Save.</li>
+<li style="font-weight:normal">Click Management Service, then click the default Management Client Service.</li>
+<li style="font-weight:normal">Click Symmetric Key and copy the Key for use in the next set of steps.</li>
+<li style="font-weight:normal">Make a note of the namespace name.</li>
+</ol>
+
+<p><b>2 - Update the code with the new namespace</b></p>
+<p>You must update the code with your own key and namespace. To do this:</p>
+<ol>
+<li style="font-weight:normal">Open the file Program.cs from the ACS.Setup
+project (the name of each setup project contains the scenario number, such as ACS.Setup.6).</li>
+<li style="font-weight:normal">Replace the AcsPassword value with the key you created.</li>
+<li style="font-weight:normal">Replace the AcsNamespace value with the namespace you created.</li>
+<li style="font-weight:normal">If you changed the default Management Client name,
+replace the AcsUsername value.</li>
+<li style="font-weight:normal">Run the ACS.Setup project using your namespace. </li>
+</ol>
+
+<p><b>Configuring Example 7 to allow enrollment of new partners</b></p>
+<p>If you want to be able to enrol new partners in this example, you must create your own ACS namespace and modify the example to use this namespace.
+The following three procedures outline the process.</p>
+<p>&nbsp;</p>
+
+<p><b>1 - Create an ACS namespace</b></p>
+<ol>
+<li style="font-weight:normal">Go to <a href="http://windows.azure.com">http://<span class="auto-style1">windows.azure.com</span></a>. You will need a Windows Live ID to log in.</li>
+<li style="font-weight:normal">Create a new Access Control Service Namespace.</li>
+<li style="font-weight:normal">Click the button to manage the new namespace once it has been created.</li>
+<li style="font-weight:normal">Click Identity Providers and click Add.</li>
+<li style="font-weight:normal">Select Windows Live ID, Google, and Yahoo. Then click Save.</li>
+<li style="font-weight:normal">Click Management Service, then click the default Management Client Service.</li>
+<li style="font-weight:normal">Click Symmetric Key and copy the Key for use in the next set of steps.</li>
+<li style="font-weight:normal">Make a note of the the namespace name.</li>
+</ol>
+
+<p><b>2 - Update the code with the new namespace</b></p>
+<p>You must update the code with your own key and namespace. To do this:</p>
+<ol>
+<li style="font-weight:normal">Open the file Program.cs from the ACS.Setup project.</li>
+<li style="font-weight:normal">In line 23, replace the AcsPassword value with the key you created.</li>
+<li style="font-weight:normal">In line 24, replace the AcsNamespace value with the namespace you created.</li>
+<li style="font-weight:normal">If you changed the default Management Client name, update this value in line 25.</li>
+<li style="font-weight:normal">Open the file Web.config from the f-Shipping.7 project.</li>
+<li style="font-weight:normal">In line 61, update the issuer value from fabrikamfp-dev to the namespace you created.</li>
+<li style="font-weight:normal">In line 67, update the trusted issuer. See the following set of steps for instructions</li>
+<li style="font-weight:normal">Run the ACS.Setup project using your namespace. This allows the f-Shipping.7 project to run.</li>
+<li style="font-weight:normal">Open the file Web.config file from the f-Shipping.Enrollment.7 project.</li>
+<li style="font-weight:normal">In line 13, replace the acs_servicenamespace value with the namespace you created.</li>
+<li style="font-weight:normal">In line 14, replace the acs_password value with the key you created.</li>
+<li style="font-weight:normal">If you changed the default Management Client name, update this value in line 15.</li>
+<li style="font-weight:normal">In line 65, update the issuer value from fabrikamfp-dev to the namespace you created.</li>
+<li style="font-weight:normal">In line 71, update the trusted issuer. See the following set of steps for instructions.</li>
+</ol>
+
+<p><b>3 - Update trusted issuers</b></p>
+<p>The main issue here is that you cannot find the thumbprint for the issuer on the
+ACS portal. There are two ways to find the value you require. The second
+of these is generally easier.</p>
+<p>&nbsp;</p>
+<p>Option 1: Add it using the Visual Studio 2010 "Add STS Reference" wizard.</p>
+<p>&nbsp;</p>
+<p>Option 2:</p>
+<ol>
+<li style="font-weight:normal">Open the FederationMetadata.xml file from the URL:<br />
+  https://{yourservicenamespace}.accesscontrol.windows.net/FederationMetadata/2007-06/FederationMetadata.xml</li>
+<li style="font-weight:normal">Copy the certificate bytes.</li>
+<li style="font-weight:normal">Paste it on a text file and save it with the .cer extension.</li>
+<li style="font-weight:normal">Open it to see the thumbprint in the certificate.</li>
+</ol>
+
+                  </div>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footerstrip">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</body>
+</html>

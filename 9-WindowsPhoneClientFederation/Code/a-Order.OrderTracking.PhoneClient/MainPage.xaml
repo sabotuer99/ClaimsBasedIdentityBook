@@ -1,0 +1,68 @@
+<!--
+===============================================================================
+ Microsoft patterns & practices
+ Cliams Identity Guide V2
+===============================================================================
+ Copyright © Microsoft Corporation.  All rights reserved.
+ This code released under the terms of the 
+ Microsoft patterns & practices license (http://claimsid.codeplex.com/license)
+===============================================================================
+-->
+
+<phone:PhoneApplicationPage 
+    xmlns:my="clr-namespace:SL.Phone.Federation.Controls;assembly=SL.Phone.Federation" 
+    x:Class="AOrder.OrderTracking.PhoneClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" >
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="a-Order" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Orders" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="LoginPanel" Grid.Row="1" Margin="12,0,12,0" Height="310">
+            <Button x:Name="GetMyOrdersPassiveButton" Content="Get orders (Passive)" Height="100" Width="350" Click="OnGetMyOrdersPassiveButtonClicked" ></Button>
+            <!--<my:AccessControlServiceSignIn x:Name="SignInControl" RequestSecurityTokenResponseStore="{StaticResource rstrStore}" />-->
+            <my:AccessControlServiceSignIn x:Name="SignInControl" Visibility="Collapsed" />
+        </Grid>
+        
+        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
+            <Button x:Name="GetMyOrdersButton" Content="Get orders (Active)" Height="100" Width="350" Click="OnGetOrdersActiveButtonClicked" ></Button>
+        </Grid>
+        <ItemsControl x:Name="OrderItems" Grid.Row="3">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="[" />
+                        <TextBlock Text="{Binding Path=Customer.Name}" />
+                        <TextBlock Text="] " />
+                        <TextBlock Text="{Binding Path=Details}" />
+                        <TextBlock Text=" ($" />
+                        <TextBlock Text="{Binding Path=Amount}" />
+                        <TextBlock Text=")" />
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+ </phone:PhoneApplicationPage>

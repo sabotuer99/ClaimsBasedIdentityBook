@@ -1,0 +1,27 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Fabrikam Shipping</title>
+    <link href="<%= Url.Content("~/Content/styles/Styles.css") %>" rel="stylesheet" type="text/css" media="screen" />
+    <script src="<%= Url.Content("~/Scripts/jquery-1.3.2.min.js") %>" language="javascript" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadPlaceholder" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="tenantlogo">
+                <img src="<%= Url.Content("~/Content/images/fabrikam-logo.png") %>" alt="Fabrikam logo" />
+            </div>
+            <div id="fabrikamshippinglogo">
+                <img src="<%= Url.Content("~/Content/images/fabrikamShipping-logo.png") %>" alt="Fabrikam logo" />
+            </div>
+        </div>
+        <div id="content">
+            <asp:ContentPlaceholder id="ContentPlaceholder" runat="server">
+            </asp:ContentPlaceholder>
+        </div>
+    </div>
+</body>
+</html>

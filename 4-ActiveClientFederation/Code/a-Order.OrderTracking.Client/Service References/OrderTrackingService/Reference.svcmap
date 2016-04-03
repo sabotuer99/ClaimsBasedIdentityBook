@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f9e23efb-dbff-42fc-9001-ae241328c441" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/a-Order.OrderTracking.Services/OrderTrackingService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrderTrackingService.xsd" MetadataType="Schema" ID="b5c141ef-8d6b-4b33-8ae2-3fbdd4fee128" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrderTrackingService1.xsd" MetadataType="Schema" ID="dde5ac28-bc85-4564-851e-d14c974dd415" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrderTrackingService2.xsd" MetadataType="Schema" ID="c28c539d-e64b-4d7a-b89a-66baf563b75c" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd5" />
+    <MetadataFile FileName="OrderTrackingService.wsdl" MetadataType="Wsdl" ID="7047c76f-0e4b-4cd3-8d76-17bd5d3a5906" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?wsdl" />
+    <MetadataFile FileName="OrderTrackingService3.xsd" MetadataType="Schema" ID="e293bb28-8de6-403c-a727-ef9fa1c552f9" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OrderTrackingService4.xsd" MetadataType="Schema" ID="03bbb588-2ec1-4339-9db6-40f139a83c02" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OrderTrackingService5.xsd" MetadataType="Schema" ID="ac172ed5-835f-438c-85d6-bac7de26bab2" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?xsd=xsd4" />
+    <MetadataFile FileName="OrderTrackingService.disco" MetadataType="Disco" ID="7ff17f2d-f55b-43eb-a435-1b9cf6d1488e" SourceId="1" SourceUrl="http://w7-whiteleaf/a-Order.OrderTracking.Services/OrderTrackingService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,117 @@
+<EntityDescriptor wsu:Id="770dbb70-2e9c-4267-985c-fc28b25479be" entityID="https://localhost/Litware.SimulatedIssuer/" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <Organization>
+    <OrganizationDisplayName xml:lang="">Litware</OrganizationDisplayName>
+    <OrganizationName xml:lang="">Litware</OrganizationName>
+    <OrganizationURL xml:lang="">
+      https://localhost/Litware.Portal
+    </OrganizationURL>
+  </Organization>
+  <ContactPerson contactType="administrative">
+    <Company>Litware</Company>
+    <GivenName>Contact</GivenName>
+    <SurName>Name</SurName>
+    <EmailAddress>
+      contactname@litware.com
+    </EmailAddress>
+    <TelephoneNumber>555-5555</TelephoneNumber>
+  </ContactPerson>
+  <RoleDescriptor xsi:type="fed:SecurityTokenServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/wsfed/federation/200706" ServiceDescription="https://localhost/Litware.SimulatedIssuer/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIB6DCCAVWgAwIBAgIQWkHDFy4VOplC20cZV9WRbDAJBgUrDgMCHQUAMBIxEDAOBgNVBAMTB2xpdHdhcmUwHhcNMDAwMTAxMDMwMDAwWhcNMzYwMTAxMDMwMDAwWjASMRAwDgYDVQQDEwdsaXR3YXJlMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDpPlzF5zAyiMqym6P3DCR2s0Bvkpdw+v3zhX3eQRu0gPjYKKUNdQN5lH9Pd3TqbXNOAn8t/wgjl6v4TnrI4bwezG7ou30tFtbWvShHQkE0XeaDyXEASP+ZeZOtsWs9xHK4V62XWcFq/htuOJSkGvtJLN8xDm7jOdj9CfHJu6nwLwIDAQABo0cwRTBDBgNVHQEEPDA6gBCcJIo2RfD9n7bH0+BU6BdToRQwEjEQMA4GA1UEAxMHbGl0d2FyZYIQWkHDFy4VOplC20cZV9WRbDAJBgUrDgMCHQUAA4GBAL5d/8n8UmYIrlA5KA2UxYFgCu7wTKiLkgFw/oEe7cw7BqgaKVJsIGvuGWeusU9jsarClNjopuWVVNAT3gZ3PNH0w5Sy5eRLOEg/ethaRRIbOUTAwTxoGfWDBXwzOmomdzBhaW9zWEaxaTCiRdNbJczbsSov7FhWgUitvS6JhHdg
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <fed:ClaimTypesOffered>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>name</auth:DisplayName>
+        <auth:Description>name</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>givenname</auth:DisplayName>
+        <auth:Description>givenname</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>surname</auth:DisplayName>
+        <auth:Description>surname</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>streetaddress</auth:DisplayName>
+        <auth:Description>streetaddress</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>stateorprovince</auth:DisplayName>
+        <auth:Description>stateorprovince</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>country</auth:DisplayName>
+        <auth:Description>country</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.litware.com/claims/2009/08/costcenter" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>costcenter</auth:DisplayName>
+        <auth:Description>costcenter</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/claims/group" Optional="True" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>group</auth:DisplayName>
+        <auth:Description>group</auth:Description>
+      </auth:ClaimType>
+    </fed:ClaimTypesOffered>
+    <fed:TokenTypesOffered>
+      <fed:TokenType Uri="urn:oasis:names:tc:SAML:1.0:assertion" />
+    </fed:TokenTypesOffered>
+    <fed:SecurityTokenServiceEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>
+          https://localhost/Litware.SimulatedIssuer/Scenario4-WebServices/Issue.svc
+        </Address>
+        <Metadata>
+          <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsx:MetadataSection Dialect="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns="">
+              <wsx:MetadataReference>
+                <Address xmlns="http://www.w3.org/2005/08/addressing">
+                  https://localhost/Litware.SimulatedIssuer/Scenario4-WebServices/Issue.svc/mex
+                </Address>
+              </wsx:MetadataReference>
+            </wsx:MetadataSection>
+          </Metadata>
+        </Metadata>
+      </EndpointReference>
+    </fed:SecurityTokenServiceEndpoint>
+    <fed:PassiveRequestorEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>
+          https://localhost/Litware.SimulatedIssuer/
+        </Address>
+      </EndpointReference>
+    </fed:PassiveRequestorEndpoint>
+  </RoleDescriptor>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <ds:SignedInfo>
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <ds:Reference URI="#770dbb70-2e9c-4267-985c-fc28b25479be">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+          <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <ds:DigestValue>
+          N3ULTXoH7VCNhs4cvW7bMeX781A=
+        </ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue>
+      XU+HNjYHT1VbgCFLMhLf8B6pNwLuTpTG5XdEjxrWByKDb76s6veWv+J51voGrzH23FX+vDsUaOWWp9ApBYqUwoyGxz1NWB1J9A0MN5lu3mLOIE2awqNFl/ZHDp5qijLM9effnqccVe3Bt4+/imx7ppdYJxZGmBfPYdjw0FOn7WU=
+    </ds:SignatureValue>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <X509Data>
+        <X509Certificate>
+          MIIB6DCCAVWgAwIBAgIQWkHDFy4VOplC20cZV9WRbDAJBgUrDgMCHQUAMBIxEDAOBgNVBAMTB2xpdHdhcmUwHhcNMDAwMTAxMDMwMDAwWhcNMzYwMTAxMDMwMDAwWjASMRAwDgYDVQQDEwdsaXR3YXJlMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDpPlzF5zAyiMqym6P3DCR2s0Bvkpdw+v3zhX3eQRu0gPjYKKUNdQN5lH9Pd3TqbXNOAn8t/wgjl6v4TnrI4bwezG7ou30tFtbWvShHQkE0XeaDyXEASP+ZeZOtsWs9xHK4V62XWcFq/htuOJSkGvtJLN8xDm7jOdj9CfHJu6nwLwIDAQABo0cwRTBDBgNVHQEEPDA6gBCcJIo2RfD9n7bH0+BU6BdToRQwEjEQMA4GA1UEAxMHbGl0d2FyZYIQWkHDFy4VOplC20cZV9WRbDAJBgUrDgMCHQUAA4GBAL5d/8n8UmYIrlA5KA2UxYFgCu7wTKiLkgFw/oEe7cw7BqgaKVJsIGvuGWeusU9jsarClNjopuWVVNAT3gZ3PNH0w5Sy5eRLOEg/ethaRRIbOUTAwTxoGfWDBXwzOmomdzBhaW9zWEaxaTCiRdNbJczbsSov7FhWgUitvS6JhHdg
+        </X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </ds:Signature>
+</EntityDescriptor>

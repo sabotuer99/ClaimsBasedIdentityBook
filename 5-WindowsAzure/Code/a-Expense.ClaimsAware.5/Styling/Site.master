@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AExpense.Site" %>
+<%@ Register assembly="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="Microsoft.IdentityModel.Web.Controls" tagprefix="idfx" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="masterHead" runat="server">
+    <title>Adatum a-Expense</title>
+    <link href="Styles.css" type="text/css" rel="Stylesheet" media="screen" />
+    <asp:ContentPlaceholder id="HeadPlaceholder" runat="server">
+    </asp:ContentPlaceholder>
+</head>
+<body>
+    <form id="masterForm" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div id="container">
+    
+        <div id="header">
+            <div id="logo">
+                <a href="http://localhost/Adatum.Portal.5/">
+                    <img src="Styling/Images/adatum-logo.png" alt="Adatum logo" />
+                </a>
+            </div>
+            <div id="sitetitle">
+                a-Expense
+            </div>
+            <% if (Session["LoggedUser"] != null) { %>
+            <div id="topuserinformation">
+                    Logged in as: <i><%= ((User)Session["LoggedUser"]).FullName %></i>
+                    (<%= this.NameClaim.OriginalIssuer %>)  <samples:TooltipInformation ID="TooltipInformation4" runat="server" Text="<%$ Resources:TooltipText, LoggedUsernameHint %>" />|  
+                    <idfx:FederatedPassiveSignInStatus ID="FederatedPassiveSignInStatus1" runat="server" 
+                        OnSignedOut="FederatedPassiveSignInStatus1SignedOut" SignOutText="Logout" FederatedPassiveSignOut="true" SignOutAction="FederatedPassiveSignOut" />
+                    <samples:TooltipInformation ID="TooltipInformation3" runat="server" Text="<%$ Resources:TooltipText, SingleSignOutHint %>" />
+            </div>
+            <div id="topnavigation">
+                <a href="Default.aspx">My Expenses</a>
+                |
+                <a href="AddExpense.aspx">Add Expense</a>
+                <%-- 
+                    The following lines are part of the authorization logic.
+                    In this legacy application, the authorization logic is spread
+                    across the source code, in the aspx pages and the database.
+                --%>
+                <% if (((User)Session["LoggedUser"]).Roles.SingleOrDefault(r => r.Name == Samples.Web.ClaimsUtilities.Adatum.Roles.Accountant) != null)
+                   { %>
+                |
+                <a href="Approve.aspx">Approve</a>
+                <samples:TooltipInformation ID="TooltipInformation2" runat="server" Text="<%$ Resources:TooltipText, ApproveLinkHint %>" />
+                <% } %>
+            </div>
+            <% } %>
+        </div>
+    
+        <div id="content">
+            <asp:ContentPlaceholder id="ContentPlaceholder" runat="server">
+            </asp:ContentPlaceholder>
+        </div>
+    
+        <div id="footer">
+            Sites in Adatum <samples:TooltipInformation ID="TooltipInformation1" runat="server" Text="<%$ Resources:TooltipText, SSOExperienceHint %>" />: 
+            <a href="https://127.0.0.1:444/">a-Expense (claims aware)</a>  |  
+            <a href="https://localhost/a-Order.ClaimsAware.5/">a-Order (claims aware)</a>
+        </div>
+    
+    </div>
+    </form>
+</body>
+</html>

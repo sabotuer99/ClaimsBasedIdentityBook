@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ServiceConfiguration serviceName="a_expese.cloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
+  <Role name="a-Expense.ClaimsAware.5">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="localhost" thumbprint="5A074D678466F59DBD063D1A98B1791474723365" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,85 @@
+﻿/************ All site ************/
+*
+{
+    font-family: Comic Sans MS, Sans-Serif;
+    font-size: large;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
+
+#container
+{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo
+{
+    float: left;
+}
+#logo img
+{
+    height: 100px;
+    width: 150px;
+    border: 0 none;
+}
+
+#sitetitle
+{
+    font-size: 50px;
+    text-align: center;
+    width: 700px;
+}
+
+#topuserinformation
+{
+    float: right;
+    padding-right: 100px;
+}
+
+#topnavigation
+{
+    clear: both;
+    padding-top: 10px;
+}
+
+#content
+{
+    clear: both;
+    padding-top: 30px;
+}
+
+#footer
+{ 
+	clear: both;
+	position: absolute;
+	margin-top: 50px;
+	font-size: medium;
+}
+#footer *
+{ 
+	font-size: medium;
+}
+
+/************ Order list ************/
+#orderslist
+{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#ordersapproverslist
+{
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#ordersapproverslist th, td,
+#orderelist th, td
+{
+    padding: 5px 5px 5px 5px;
+}
