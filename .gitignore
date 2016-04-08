@@ -2,3 +2,5 @@ bin/
 obj/
 /Backup/
 *.suo
+/Backup*/
+UpgradeLog*.htm
