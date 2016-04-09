@@ -1,8 +1,8 @@
 <EntityDescriptor wsu:Id="49d8edee-77db-4c14-b477-35a7f46820a3" entityID="https://localhost/Adatum.SimulatedIssuer/" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
   <Organization>
-    <OrganizationDisplayName xml:lang="">Adatum</OrganizationDisplayName>
-    <OrganizationName xml:lang="">Adatum</OrganizationName>
-    <OrganizationURL xml:lang="">
+    <OrganizationDisplayName xml:lang="en">Adatum</OrganizationDisplayName>
+    <OrganizationName xml:lang="en">Adatum</OrganizationName>
+    <OrganizationURL xml:lang="en">
       http://localhost/Adatum.Portal/
     </OrganizationURL>
   </Organization>

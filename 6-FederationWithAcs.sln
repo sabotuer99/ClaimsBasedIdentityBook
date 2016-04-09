@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supporting files", "Supporting files", "{6C0D2C47-E324-48EF-B4E5-7E1E03597C97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Litware.Portal.6", "6-FederationAndAcs\Code\Litware.Portal.6\Litware.Portal.6.csproj", "{1FF912E6-BBE3-464F-BC1F-93731CD42389}"
@@ -20,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACS.Setup.6", "6-FederationAndAcs\Code\ACS.Setup.6\ACS.Setup.6.csproj", "{3E2A529D-E8B9-4669-A09E-E385E0D64ADE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACS.ServiceManagementWrapper", "Shared Code\ACS.ServiceManagementWrapper\ACS.ServiceManagementWrapper.csproj", "{309877C5-0AAA-4BED-BBA7-F67795B17D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FederationMetadataValidator", "FederationMetadataValidator\FederationMetadataValidator.csproj", "{565A55D5-061E-439C-A3C6-C36DBED53F88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -122,6 +126,16 @@ Global
 		{309877C5-0AAA-4BED-BBA7-F67795B17D0F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{309877C5-0AAA-4BED-BBA7-F67795B17D0F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{309877C5-0AAA-4BED-BBA7-F67795B17D0F}.Release|x86.ActiveCfg = Release|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{565A55D5-061E-439C-A3C6-C36DBED53F88}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
