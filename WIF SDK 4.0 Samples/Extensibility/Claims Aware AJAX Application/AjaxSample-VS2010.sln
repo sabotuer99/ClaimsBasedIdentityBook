@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AjaxRP", "AjaxRP\", "{3A0A634F-6F9D-4CDD-AB69-E2DF80EEC054}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/AjaxRP"
+		Debug.AspNetCompiler.PhysicalPath = "AjaxRP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AjaxRP\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AjaxRP"
+		Release.AspNetCompiler.PhysicalPath = "AjaxRP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AjaxRP\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64217"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AjaxSTS", "AjaxSTS\", "{2B0CA840-23FA-4570-BB98-FD690B5B4526}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/AjaxSTS"
+		Debug.AspNetCompiler.PhysicalPath = "AjaxSTS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AjaxSTS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AjaxSTS"
+		Release.AspNetCompiler.PhysicalPath = "AjaxSTS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AjaxSTS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "43355"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A0A634F-6F9D-4CDD-AB69-E2DF80EEC054}.Debug|.NET.ActiveCfg = Debug|.NET
+		{3A0A634F-6F9D-4CDD-AB69-E2DF80EEC054}.Debug|.NET.Build.0 = Debug|.NET
+		{2B0CA840-23FA-4570-BB98-FD690B5B4526}.Debug|.NET.ActiveCfg = Debug|.NET
+		{2B0CA840-23FA-4570-BB98-FD690B5B4526}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+﻿You will be able to edit this text if you are logged in as a user with Editor privileges.
+
+You will only be able to view this if you are logged in as a user with Reviewer privileges.

@@ -1,0 +1,4 @@
+<%@ServiceHost  
+    language="c#"
+    Factory="AuthAssuranceSTS.X509CardStsHostFactory" 
+    Service="AuthAssuranceSTS.CustomSecurityTokenServiceConfiguration" %>

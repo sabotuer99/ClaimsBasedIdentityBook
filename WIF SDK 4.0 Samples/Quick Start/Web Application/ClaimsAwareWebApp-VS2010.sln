@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PassiveRedirectBasedClaimsAwareWebApp", "PassiveRedirectBasedClaimsAwareWebApp\", "{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ClaimsAwareWebApp"
+		Debug.AspNetCompiler.PhysicalPath = "PassiveRedirectBasedClaimsAwareWebApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ClaimsAwareWebApp\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ClaimsAwareWebApp"
+		Release.AspNetCompiler.PhysicalPath = "PassiveRedirectBasedClaimsAwareWebApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ClaimsAwareWebApp\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61709"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PassiveSTS", "PassiveSTS\", "{06B7CE61-A9A4-4958-99AD-44C18FDD8766}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/PassiveSTSForClaimsAwareWebApp"
+		Debug.AspNetCompiler.PhysicalPath = "PassiveSTS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PassiveSTSForClaimsAwareWebApp\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PassiveSTSForClaimsAwareWebApp"
+		Release.AspNetCompiler.PhysicalPath = "PassiveSTS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PassiveSTSForClaimsAwareWebApp\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61710"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebControlBasedClaimsAwareWebApp", "WebControlBasedClaimsAwareWebApp\", "{BA1ADA75-EB77-4D90-92C9-16A25172D5DB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/WebControlBasedClaimsAwareWebApp"
+		Debug.AspNetCompiler.PhysicalPath = "WebControlBasedClaimsAwareWebApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebControlBasedClaimsAwareWebApp\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WebControlBasedClaimsAwareWebApp"
+		Release.AspNetCompiler.PhysicalPath = "WebControlBasedClaimsAwareWebApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebControlBasedClaimsAwareWebApp\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61430"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Debug|.NET.ActiveCfg = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Debug|.NET.Build.0 = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Debug|.NET.ActiveCfg = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Debug|.NET.Build.0 = Debug|.NET
+		{BA1ADA75-EB77-4D90-92C9-16A25172D5DB}.Debug|.NET.ActiveCfg = Debug|.NET
+		{BA1ADA75-EB77-4D90-92C9-16A25172D5DB}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

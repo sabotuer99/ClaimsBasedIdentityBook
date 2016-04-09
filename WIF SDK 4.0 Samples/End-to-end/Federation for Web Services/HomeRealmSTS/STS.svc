@@ -1,0 +1,1 @@
+﻿<%@ServiceHost language=C# Factory="Microsoft.IdentityModel.Samples.FederationScenario.HomeRealmClassFactory" Service="Microsoft.IdentityModel.Samples.FederationScenario.CustomHomeRealmSecurityTokenServiceConfiguration"%>

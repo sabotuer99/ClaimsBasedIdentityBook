@@ -1,0 +1,77 @@
+.assembly extern 'System'
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89)
+  .ver clr2.0
+}
+.assembly extern 'System.IdentityModel'
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89)
+  .ver clr3.0
+}
+.assembly extern 'mscorlib'
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89)
+  .ver clr2.0
+}
+.assembly 'Common'
+{
+  .custom instance void ['mscorlib']'System.Runtime.InteropServices'.'ComVisibleAttribute'::.ctor(bool) = (01 00 00 00 00)
+  .hash algorithm 0x00008004
+  .ver corext
+}
+.namespace 'Microsoft.IdentityModel.Samples.FederationScenario'
+{
+  .class public abstract sealed 'ScenarioConstants'
+    extends ['mscorlib']'System'.'Object'
+  {
+    .field static public literal string 'BookNameHeaderName' = "BookName"
+    .field static public literal string 'BookNameHeaderNamespace' = "http://tempuri.org/"
+    .field static public literal string 'PurchaseAuthorizedClaim' = "http://tempuri.org/PurchaseAuthorizedClaim"
+    .field static public literal string 'PurchaseClaimNamespace' = "http://tempuri.org/"
+    .field static public literal string 'PurchaseLimitClaim' = "http://tempuri.org/PurchaseLimitClaim"
+  }
+  .class public abstract sealed 'X509Helper'
+    extends ['mscorlib']'System'.'Object'
+  {
+    .method public static hidebysig 
+      class ['System']'System.Security.Cryptography.X509Certificates'.'X509Certificate2' 'GetX509Certificate2'(valuetype ['System']'System.Security.Cryptography.X509Certificates'.'StoreName' 'storeName', valuetype ['System']'System.Security.Cryptography.X509Certificates'.'StoreLocation' 'storeLocation', string 'subjectDistinguishedName')
+    {
+      ret
+    }
+    .method public static hidebysig 
+      class ['System.IdentityModel']'System.IdentityModel.Tokens'.'X509SecurityToken' 'GetX509TokenFromCert'(valuetype ['System']'System.Security.Cryptography.X509Certificates'.'StoreName' 'storeName', valuetype ['System']'System.Security.Cryptography.X509Certificates'.'StoreLocation' 'storeLocation', string 'subjectDistinguishedName')
+    {
+      ret
+    }
+    .method public static hidebysig 
+      uint8[] 'GetCertificateThumbprint'(valuetype ['System']'System.Security.Cryptography.X509Certificates'.'StoreName' 'storeName', valuetype ['System']'System.Security.Cryptography.X509Certificates'.'StoreLocation' 'storeLocation', string 'subjectDistinguishedName')
+    {
+      ret
+    }
+  }
+  .class public serializable 'X509HelperException'
+    extends ['mscorlib']'System'.'Exception'
+  {
+    .method public hidebysig specialname 
+      instance void '.ctor'(string 'message')
+    {
+      ret
+    }
+    .method family hidebysig specialname 
+      instance void '.ctor'(class ['mscorlib']'System.Runtime.Serialization'.'SerializationInfo' 'info', valuetype ['mscorlib']'System.Runtime.Serialization'.'StreamingContext' 'context')
+    {
+      ret
+    }
+    .method public hidebysig specialname 
+      instance void '.ctor'()
+    {
+      ret
+    }
+    .method public hidebysig specialname 
+      instance void '.ctor'(string 'message', class ['mscorlib']'System'.'Exception' 'inner')
+    {
+      ret
+    }
+  }
+}
+

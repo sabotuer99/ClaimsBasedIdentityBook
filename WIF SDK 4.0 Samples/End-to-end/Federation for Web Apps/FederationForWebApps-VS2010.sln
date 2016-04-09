@@ -1,0 +1,123 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CorpWebSite", "CorpWebSite\", "{870943E3-48B1-4DE3-BF9B-621B4C87603A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/CorpWebSite"
+		Debug.AspNetCompiler.PhysicalPath = "CorpWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CorpWebSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CorpWebSite"
+		Release.AspNetCompiler.PhysicalPath = "CorpWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CorpWebSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55959"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FederationPassiveRP", "FederationPassiveRP\", "{36CBB761-7D62-4B05-82B6-AA42150B9684}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/FederationPassiveRP"
+		Debug.AspNetCompiler.PhysicalPath = "FederationPassiveRP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\FederationPassiveRP\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/FederationPassiveRP"
+		Release.AspNetCompiler.PhysicalPath = "FederationPassiveRP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\FederationPassiveRP\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4002"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FPSTS", "FPSTS\", "{3DBF72E4-CE56-4F05-8B68-58637848B13B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/FPSTS"
+		Debug.AspNetCompiler.PhysicalPath = "FPSTS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\FPSTS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/FPSTS"
+		Release.AspNetCompiler.PhysicalPath = "FPSTS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\FPSTS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4003"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IPSTS1", "IPSTS1\", "{47625535-462D-444C-8BC0-99347E2736CA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/IPSTS1"
+		Debug.AspNetCompiler.PhysicalPath = "IPSTS1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\IPSTS1\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/IPSTS1"
+		Release.AspNetCompiler.PhysicalPath = "IPSTS1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\IPSTS1\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4004"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IPSTS2", "IPSTS2\", "{480C9E46-057F-464C-8C2C-3755465AF753}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/IPSTS2"
+		Debug.AspNetCompiler.PhysicalPath = "IPSTS2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\IPSTS2\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/IPSTS2"
+		Release.AspNetCompiler.PhysicalPath = "IPSTS2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\IPSTS2\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4009"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{870943E3-48B1-4DE3-BF9B-621B4C87603A}.Debug|.NET.ActiveCfg = Debug|.NET
+		{870943E3-48B1-4DE3-BF9B-621B4C87603A}.Debug|.NET.Build.0 = Debug|.NET
+		{36CBB761-7D62-4B05-82B6-AA42150B9684}.Debug|.NET.ActiveCfg = Debug|.NET
+		{36CBB761-7D62-4B05-82B6-AA42150B9684}.Debug|.NET.Build.0 = Debug|.NET
+		{3DBF72E4-CE56-4F05-8B68-58637848B13B}.Debug|.NET.ActiveCfg = Debug|.NET
+		{3DBF72E4-CE56-4F05-8B68-58637848B13B}.Debug|.NET.Build.0 = Debug|.NET
+		{47625535-462D-444C-8BC0-99347E2736CA}.Debug|.NET.ActiveCfg = Debug|.NET
+		{47625535-462D-444C-8BC0-99347E2736CA}.Debug|.NET.Build.0 = Debug|.NET
+		{480C9E46-057F-464C-8C2C-3755465AF753}.Debug|.NET.ActiveCfg = Debug|.NET
+		{480C9E46-057F-464C-8C2C-3755465AF753}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

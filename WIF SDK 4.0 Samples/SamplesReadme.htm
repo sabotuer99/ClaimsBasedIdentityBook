@@ -1,0 +1,1264 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Microsoft Windows Identity Foundation – Samples</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h5
+	{mso-style-link:"Heading 5 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Heading 6 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Heading 7 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Heading 8 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Heading 9 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:22.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Quote Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Intense Quote Char";
+	margin-top:10.0pt;
+	margin-right:.65in;
+	margin-bottom:14.0pt;
+	margin-left:.65in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	text-decoration:underline;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	letter-spacing:.25pt;
+	font-weight:bold;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:small-caps;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-link:"Heading 5";
+	font-family:"Cambria","serif";
+	color:#243F60;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-link:"Heading 6";
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-style:italic;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-link:"Heading 7";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-link:"Heading 8";
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-link:"Heading 9";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+span.QuoteChar
+	{mso-style-name:"Quote Char";
+	mso-style-link:Quote;
+	color:black;
+	font-style:italic;}
+span.IntenseQuoteChar
+	{mso-style-name:"Intense Quote Char";
+	mso-style-link:"Intense Quote";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+p.msotitlecxspfirst, li.msotitlecxspfirst, div.msotitlecxspfirst
+	{mso-style-name:msotitlecxspfirst;
+	mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.msotitlecxspmiddle, li.msotitlecxspmiddle, div.msotitlecxspmiddle
+	{mso-style-name:msotitlecxspmiddle;
+	mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.msotitlecxsplast, li.msotitlecxsplast, div.msotitlecxsplast
+	{mso-style-name:msotitlecxsplast;
+	mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.msolistparagraphcxspfirst, li.msolistparagraphcxspfirst, div.msolistparagraphcxspfirst
+	{mso-style-name:msolistparagraphcxspfirst;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.msolistparagraphcxspmiddle, li.msolistparagraphcxspmiddle, div.msolistparagraphcxspmiddle
+	{mso-style-name:msolistparagraphcxspmiddle;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.msolistparagraphcxsplast, li.msolistparagraphcxsplast, div.msolistparagraphcxsplast
+	{mso-style-name:msolistparagraphcxsplast;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.msopapdefault, li.msopapdefault, div.msopapdefault
+	{mso-style-name:msopapdefault;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+span.heading2char0
+	{mso-style-name:heading2char0;
+	font-family:"Verdana","sans-serif";
+	color:#548DD4;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0in 0in 4.0pt 0in'>
+
+<p class=MsoTitle>Microsoft Windows Identity Foundation - Samples</p>
+
+</div>
+
+<p class=MsoTocHeading>Contents</p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407799">Introduction<span
+style='color:windowtext;display:none;text-decoration:none'>. 1</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407800">Platform
+Requirements<span style='color:windowtext;display:none;text-decoration:none'>.
+1</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407801">Setup
+Pre-requisites<span style='color:windowtext;display:none;text-decoration:none'>.
+2</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407802">Steps for
+Working with the Samples<span style='color:windowtext;display:none;text-decoration:
+none'>. 3</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407803">Folder
+structure<span style='color:windowtext;display:none;text-decoration:none'>. 4</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407804">Samples List<span
+style='color:windowtext;display:none;text-decoration:none'>. 4</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc202407805">Quick Start<span
+style='color:windowtext;display:none;text-decoration:none'>. 4</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc202407806">End-to-end
+Scenario<span style='color:windowtext;display:none;text-decoration:none'>. 5</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc202407807">Extensibility<span
+style='color:windowtext;display:none;text-decoration:none'>. 5</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407808">FAQs<span
+style='color:windowtext;display:none;text-decoration:none'>. 7</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc202407809">Known Issues<span
+style='color:windowtext;display:none;text-decoration:none'>. 10</span></a></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc202407799"><span style='font-family:"Calibri","sans-serif"'>Introduction</span></a></h2>
+
+<p class=MsoNormal>The Windows Identity Foundation samples are simple web sites
+and console applications that demonstrate the essential features of the
+product. Each sample has a readme which describes the purpose of the sample and
+instructions for running the sample. </p>
+
+<h2><a name="_Toc202407800"><span style='font-family:"Calibri","sans-serif"'>Platform
+Requirements</span></a></h2>
+
+<p class=MsoNormal>In order to run these samples, the following software must
+be installed:</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>1.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.NET Framework 4.0</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>2.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Internet Explorer 7.0 or 8.0 for web based samples</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>3.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Operating Systems: </p>
+
+<p class=MsoListParagraph>Microsoft<sup>®</sup> Windows<sup>®</sup> 7,
+Microsoft<sup>®</sup> Windows<sup>®</sup> Server 2008 R2, Microsoft<sup>®</sup>
+Windows<sup>®</sup> Vista SP2, Microsoft<sup>®</sup> Windows Server 2008 SP2,
+and Microsoft<sup>®</sup> Windows Server 2003 SP2 (32-bit or 64-bit)</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>4.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Visual Studio 2010</p>
+
+<h2><a name="_Toc202407801"><span style='font-family:"Calibri","sans-serif"'>Setup
+Pre-requisites</span></a></h2>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>1.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Sample setup scripts require administrative privileges to perform the
+necessary operations in IIS. Hence execute the setup batch files with
+administrator privileges. Open up solutions in Visual Studio with administrator
+privileges if you plan to debug them from VS.</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>2.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>All the Web Site samples which contain .svc files (i.e. WCF based
+services) require an HttpHandler to be registered with IIS.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>If WCF Activation has been enabled
+through &quot;Add/Remove Windows Components&quot; then IIS is already
+configured to handle WCF requests, skip this step.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>If this is not done then you can activate
+WCF service handling by either through “Add/Remove Windows Components” or
+manually. </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>In IIS 7.0, to manually add a managed
+handler, follow the instructions <a
+href="http://technet.microsoft.com/en-us/library/cc771240(WS.10).aspx"><span
+style='font-size:12.0pt;line-height:115%'>here</span></a>. &nbsp;Set the
+‘Request path’ to &quot;*.svc&quot; and the set ‘Type’ is set to:</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
+margin-left:.5in'>&quot;System.ServiceModel.Activation.HttpHandler,
+System.ServiceModel, Version=3.0.0.0, Culture = neutral,
+PublicKeyToken=b77a5c561934e089&quot;.</p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:-.25in'>3.<span style='font-size:7.0pt;line-height:115%;font-family:
+"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Configuring
+HTTP or HTTPS and ASP.Net in IIS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Setup scripts provided with this
+samples package use httpcfg.exe or netsh.exe tool depending on the operating
+system. Windows Server 2003 SP2 uses httpcfg.exe while Vista and Windows Server
+2008 use netsh.exe.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>For Windows Vista and Windows
+Server 2008 there are no special instructions to setup the ASP.Net.</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. &nbsp;&nbsp;&nbsp;
+Enabling Windows Authentication Support in IIS 7</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Some of the web site samples require Windows Integrated Authentication in IIS,
+hence this feature needs to be turned on. </p>
+
+<p class=MsoNormal style='text-indent:.5in'>For Windows Vista and Windows 2008:
+</p>
+
+<p class=MsoListParagraph style='margin-left:1.25in;text-indent:-.25in'>-<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>browse to Control Panel and then click Programs</p>
+
+<p class=MsoListParagraph style='margin-left:1.25in;text-indent:-.25in'>-<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Select “Turn Windows Features on or off” and then in the dialog that
+opens browse to Internet Information Services\World Wide Web Services\Security</p>
+
+<p class=MsoListParagraph style='margin-left:1.25in;text-indent:-.25in'>-<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Check the box beside “Windows Authentication”, system will ask you for a
+restart for the changes to take effect.</p>
+
+<h2><a name="_Toc202407802"><span style='font-family:"Calibri","sans-serif"'>Steps
+for Working with the Samples</span></a><span style='font-family:"Calibri","sans-serif"'>&nbsp;</span></h2>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>1.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Run SamplesPreReqSetup.bat</b>.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>With administrator privileges, run
+the SamplesPreReqSetup.bat file under the Samples\Utilities directory to set up
+and configure the SSL certificate and configure the write permission for the
+NETWORK SERVICE account. </p>
+
+<p class=MsoNormal style='margin-left:.5in'>Note: if the computer on which you
+plan to run SamplesPreReqSetup.bat already has an existing IIS SSL configuration,
+you should back up that configuration before installing the Windows Identity
+Foundation samples.&nbsp; See Step 5 for more information.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><a href="#_2.__">FAQ #2</a>
+describes the detailed steps taken by the SamplesPreReqSetup.bat file.</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>2.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Create the appropriate virtual directories.</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>In order to create the appropriate
+IIS virtual directories for each sample, run the Setup.bat found in each sample
+directory. For example, if you want to run the Claims Aware Web App sample,
+navigate to the \Quick Start\Web Application\ directory and run the Setup.bat.
+The batch file will set up a virtual directory called
+PassiveRedirectBasedClaimsAwareWebApp which points to the \Quick Start\Web
+Application\PassiveRedirectBasedClaimsAwareWebApp directory.</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>3.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Build the samples.</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>Open the solution files (.sln) for
+the samples you wish to build in Visual Studio and build the service and the
+client projects.</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'>4.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Run the samples.</b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>For the Web site samples, visit the
+appropriate sample Web site in Microsoft Internet Explorer 7 or 8.&nbsp;
+Specific guidance for each sample can be found in its readme.htm file.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
+margin-left:.5in'>For the console based samples, you can invoke the client from
+the Visual Studio debugger or the command line.&nbsp; </p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><a name="_5.__"></a>5.<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Clean up</b>.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>To undo the changes made by SamplePreReqSetup.bat,
+run SamplesPreReqCleanup.bat from the Samples\Utilities directory with
+administrator privileges.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Note: if you run
+SamplesPreReqCleanup.bat on a computer that had a pre-existing SSL
+configuration in IIS prior to the installation of the Windows Identity
+Foundation samples using SamplesPreReqSetup.bat, then Cleanup.bat will remove
+both the changes made by SamplesPreReqSetup.bat and the system's prior SSL
+configuration.</p>
+
+<p class=MsoNormal style='margin-left:.25in'>&nbsp;</p>
+
+<h2><a name="_Toc202407803"><span style='font-family:"Calibri","sans-serif"'>Folder
+structure</span></a></h2>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>SamplesReadMe.htm
+– This file contains the list of pre-requisites and samples list included in
+the SDK</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>\Quick Start – Contains the
+introductory samples to get you started with core functionalities of framework</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>\End-to-end – Contains the scenario
+samples that cover major end-to-end scenarios</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>\Extensibility – Contains the advanced
+samples that cover extensible features that requires a basic understanding of
+Windows Identity Foundation</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>\Utilities – Contains the scripts for
+initial setup of samples and for the creation of virtual directories</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<h2><a name="_Toc202407804"><span style='font-family:"Calibri","sans-serif"'>Samples
+List</span></a></h2>
+
+<p class=MsoNormal>The following samples are included:</p>
+
+<h3 style='margin-bottom:12.0pt'><a name="_Toc202407805"><span
+style='font-family:"Calibri","sans-serif"'>Quick Start</span></a></h3>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Quick%20Start/Web%20Application/readme.htm">Simple Claims Aware Web
+Application</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
+margin-left:.5in'>This sample Web site shows how claims are enumerated in a Web
+application and the two methods, namely PassiveRedirectBased and
+FederatedPassiveSignInControlBased, which are available to perform federation
+passive to an STS.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Quick%20Start/Web%20Service/readme.htm">Simple Claims Aware Web Service</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
+margin-left:.5in'>This sample shows how claims are enumerated in a relying party
+Web service (WCF based). It uses a WCF based security token service that is an
+IIS hosted WCF service.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Quick%20Start/CardSpace/readme.htm">Simple Web Application With
+Information Card SignIn </a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to write an STS
+that supports username/password backed managed information cards. This sample
+illustrates Windows CardSpace features that are available in InformationCard
+object tag.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b>NOTE:</b> This sample requires
+Windows&nbsp;CardSpace&nbsp;1.0, which is not available in .NET&nbsp;4.0. To
+run this sample .NET&nbsp;3.5&nbsp;SP1 must be installed. </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Quick%20Start/Using%20Managed%20STS/readme.htm">Simple Web Application
+With Managed STS </a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to build a relying
+party application that uses STSes that are on the cloud (LiveID STS) or on
+premise (Active Directory Federation Services V2).</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Quick%20Start/Web%20Farm/readme.htm">Claims Aware Web Application in a
+Web Farm </a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to build and run
+a claims-aware application in a web farm scenario, for example two web
+application servers running behind a load balancer and serving the same
+content.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Quick%20Start/Using%20Claims%20In%20IsInRole/readme.htm">Using Claims In
+IsInRole</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
+margin-left:.5in'>This sample shows how to use IIdentity.IsInRole() with claims
+and also how claims issued by an Identity Provider may be mapped to claims that
+the Relying Party understands.</p>
+
+<h3 style='margin-bottom:12.0pt'><a name="_Toc202407806"><span
+style='font-family:"Calibri","sans-serif"'>End-to-end Scenario</span></a></h3>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="End-to-end/Authentication%20Assurance/readme.htm">Authentication
+Assurance</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how an application
+can use the claims model to enforce a certain level of authentication assurance
+for various operations.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b>NOTE:</b> This sample requires
+Windows&nbsp;CardSpace&nbsp;1.0, which is not available in .NET&nbsp;4.0. To
+run this sample .NET&nbsp;3.5&nbsp;SP1 must be installed. </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="End-to-end/Federation%20For%20Web%20Services/readme.htm">Federation For
+Web Services</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
+margin-left:.5in'>This sample shows how to build STSes that are WCF-based and
+hosted in IIS and using WSFederationBinding how one can achieve federation
+scenario.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><u><a
+href="End-to-end/Federation%20For%20Web%20Apps/readme.htm">Federation For Web
+Applications</a></u></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:12.0pt;
+margin-left:.5in'>This sample shows how to build STSes that are ASP.Net-based
+and using WSFederation how one can achieve federation scenario.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="End-to-end/Identity%20Delegation/readme.htm">Identity Delegation</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>The Identity Delegation Scenario sample
+shows how to build identity delegation into simple distributed services by
+using the ActAs functionality. This project contains a mix of passive and
+active STS. SAML 1.1 tokens are being issued by STSes. The service projects are
+console based and the client is browser.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="End-to-end/Multiple%20Signin%20Methods/readme.htm">Web Application With
+Multiple SignIn Methods</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to use the
+Windows Identity Foundation to set up a multi-authentication scenario (that is,
+a single relying party that authenticates users through multiple authentication
+methods).</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="End-to-end/Federation%20Metadata/readme.htm">Federation Metadata</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to dynamically
+generate federation metadata document for a security token service (STS).
+Federation metadata document typically contains a list of claims offered by an STS
+and its token signing certificate etc.,. This document is used during trust
+establishment between a relying party application and an STS. Federation
+metadata is a standard publicized in WS-Federation 1.2 specification.</p>
+
+<h3 style='margin-bottom:12.0pt'><a name="_Toc202407807"><span
+style='font-family:"Calibri","sans-serif"'>Extensibility</span></a></h3>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Extensibility/Claims%20Aware%20AJAX%20Application/readme.htm">Claims
+Aware AJAX Application</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample illustrates how claims
+based model can be incorporated to an AJAX application.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Extensibility/Convert%20Claims%20To%20NT%20Token/readme.htm">Convert
+Claims To NT Token</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to use the
+Windows Identity Foundation Claims To NT Token Service (C2WTS) to produce
+Impersonate-level WindowsIdentity objects from SAML tokens which contain a
+unique principal name (UPN) claim.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Extensibility/Customizing%20Request%20Security%20Token/readme.htm">Customizing
+Request Security Token</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to customize a
+token request so that it can send a custom element to the token issuer.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><a
+href="Extensibility/Customizing%20Token/readme.htm">Customizing Token</a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>This sample shows how to issue a custom
+token.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;<a
+href="Extensibility/WSTrustChannel/readme.htm">WSTrustChannel</a></p>
+
+<p class=MsoNormal style='margin-left:.5in'>This sample shows how to use
+WSTrustChannel class to request security tokens from a STS and use the security
+token to secure messages sent to a RP.&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;<a
+href="Extensibility/Claims%20Based%20Authorization/readme.htm">Claims based
+Authorization</a>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'>This sample shows how to do Claims
+based authorization by extending the default ClaimsAuthorizationManager. &nbsp;</p>
+
+<h2><a name="_Toc202407808"></a><span style='font-family:"Calibri","sans-serif"'>FAQs</span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Calibri","sans-serif"'>&nbsp;</span></h2>
+
+<h4 style='margin-left:13.5pt;text-indent:-13.5pt'>1.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp; </span>How
+can I use existing SSL certificates?<a name="_5._How_can"></a></h4>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Answer</b>: If you have already
+set up an SSL certificate with IIS and you want to keep using that certificate,
+then you should be careful while running SamplesPreReqSetup.bat. If the
+existing SSL certificate has a subject name equal to CN=localhost, then
+SamplesPreReqSetup.bat will still work for you. Otherwise, you should press
+Ctrl-C when running SamplesPreReqSetup.bat so that your existing SSL certificate
+is not replaced with the localhost certificate. You should also replace all the
+occurrences of &quot;localhost&quot; with your subject name in the samples in
+order to make those samples work with your certificate. &nbsp;</p>
+
+<h4 style='margin-left:13.5pt;text-indent:-13.5pt'><a name="_6._How_to"></a><a
+name="_2.__"></a>2.<span style='font-size:7.0pt;line-height:115%;font-family:
+"Times New Roman","serif"'>&nbsp;&nbsp; </span>How do I manually set up the
+samples if I don't want to run <span style='font-size:12.0pt;line-height:115%'>SamplesPreReq</span>Setup.bat?</h4>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt'>The following text explains what
+SamplesPreReqSetup.bat does, and you can follow these steps to manually set up
+the samples.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Step 1: Run
+SamplesPreReqCleanup.bat</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>It runs SamplesPreReqCleanup.bat first
+to reset your installation to a clean state.&nbsp; See the note above about
+SamplesPreReqCleanup.bat and pre-existing SSL certificates.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Step 2: Create a test
+certificate for running the samples and give permission to the certificate
+private key.</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>SamplesPreReqSetup.bat first
+examines if there is a localhost certificate already installed in
+LocalMachine/My store. If so, SamplesPreReqSetup.bat overwrites that existing
+certificate. If not, SamplesPreReqSetup.bat uses the tool wifmakecert.exe,
+which comes with WIF SDK. SamplesPreReqSetup.bat creates a certificate, which
+can be used for SSL client and server authentication, and adds that certificate
+to the trusted root store.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>The batch file next verifies that
+your IIS process has permission to access the certificate's private key. It
+first finds the private key file location, and explicitly gives permission for
+the ASPNET process to access that private key file.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Step 3: Set up SSL
+configuration.</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>For console based samples,
+SamplesPreReqSetup.bat reserves the appropriate HTTP.SYS namespace for NETWORK
+SERVICE, imports the server SSL certificate, and points HTTP.SYS to that
+certificate.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>For Web site samples,
+SamplesPreReqsetup.bat registers the SSL certificate with IIS.&nbsp; </p>
+
+<p class=MsoNormal style='margin-left:.5in'>If you want to set up the SSL
+certificate manually without running this part of the script, you can hit
+Ctrl-C to exit from the script, and do it yourself.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>IIS 7 allows users to create and
+install certificates from the UI.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'>For IIS 7:<b><span
+style='font-size:13.5pt'> </span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in'>1.<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Go to Start-&gt;Run and type &quot;inetmgr&quot;. This will run the IIS
+7 manager.</p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in'>2.<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Import the server certificate. Click the root node on the left pane,
+which should look like {your computer name}(domain\username}. </p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in'>3.<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Then, in the middle pane, under IIS, double-click &quot;server
+certificates&quot;. This displays a list of certificates that can be used in
+SSL. Import the SSL certificate by clicking &quot;import&quot; in the right
+pane. </p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in'>4.<span
+style='font-size:7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Add the binding. Click the &quot;Default Web Site&quot; node in the left
+pane. In the right pane, click &quot;Bindings&quot;, and then click
+&quot;Add&quot;. </p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+12.0pt;margin-left:.75in;text-indent:-.25in'>5.<span style='font-size:7.0pt;
+line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Add the https binding, then click Edit, and then choose the certificate
+you just imported in step 1.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Step 4: restart the IIS process.</b></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt'>Run &quot;iisreset&quot; to restart the IIS Web server
+process.</span></p>
+
+<h4 style='margin-left:13.5pt;text-indent:-13.5pt'>3.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp; </span>How
+do I manually clean up the samples if I don't want to run SamplesPreReqCleanup.bat?</h4>
+
+<p class=MsoNormal style='margin-left:.5in'>The following text explains what
+SamplesPreReqCleanup.bat does, and you can follow these steps to manually clean
+up the samples.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Step 1: Tear down SSL.</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:12.0pt;
+line-height:115%'>This removes the SSL bindings in IIS.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Step 2: Delete the localhost
+certificate.</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:12.0pt;
+line-height:115%'>This step deletes the localhost certificate which was created
+in SamplesPreReqSetup.bat.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Step 3: Restart the IIS process</b>.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:12.0pt;
+line-height:115%'>This step runs &quot;iisreset&quot; to restart the IIS Web
+server process.</span></p>
+
+<h4 style='margin-left:13.5pt;text-indent:-13.5pt'>4.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp; </span>How
+do I resolve &quot;Server Application Unavailable&quot; errors?</h4>
+
+<p class=MsoNormal style='margin-left:.5in'>All the Web Site samples which
+contain .svc files require an HttpHandler to be registered with IIS. This can
+be done by manually adding a mapping in which the request path is set to
+&quot;*.svc&quot; and the Type is set to &quot;System.ServiceModel.Activation.HttpHandler,
+System.ServiceModel, Version=3.0.0.0, Culture = neutral,
+PublicKeyToken=b77a5c561934e089&quot;.</p>
+
+<h4 style='margin-left:13.5pt;text-indent:-13.5pt'>5.<span style='font-size:
+7.0pt;line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp; </span>Does
+Windows Identity Foundation Runtime provide native 64-bit setup installer?</h4>
+
+<p class=MsoNormal style='margin-left:.5in'>Yes, Windows Identity Foundation
+Runtime provides native 64-bit setup installer in addition to the 32-bit
+installer.</p>
+
+<h2>Tracing / Diagnostics</h2>
+
+<p class=MsoNormal><br>
+If you have gone through the above FAQ and you’re still having problems, you
+should enable tracing. You can enable tracing on both the STS and the relying
+party. The following trace configuration is good for both a WCF application,
+and a relying party built using the Windows Identity Foundation. When
+configured, this will enable tracing on both the WCF as well as the Windows
+Identity Foundation layer.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&lt;configuration&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;system.serviceModel&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;diagnostics&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;messageLogging maxMessagesToLog=&quot;30000&quot; </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+logEntireMessage=&quot;true&quot; </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+logMessagesAtServiceLevel=&quot;true&quot; </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+logMalformedMessages=&quot;true&quot; </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+logMessagesAtTransportLevel=&quot;true&quot;&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/messageLogging&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/diagnostics&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/system.serviceModel&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;system.diagnostics&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;sources&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;source name=&quot;Microsoft.IdentityModel&quot; switchValue=”Verbose”&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;listeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;add name=&quot;xml&quot; /&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/listeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/source&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;source name=&quot;System.ServiceModel.MessageLogging&quot;
+logKnownPii=”false” switchValue=”Verbose”&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;listeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;add name=&quot;xml&quot; /&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/listeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/source&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;source name=&quot;System.ServiceModel&quot; switchValue=&quot;Error,
+ActivityTracing&quot; propagateActivity=&quot;true&quot; &gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;listeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;add name=&quot;xml&quot; /&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/listeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/source&gt;&nbsp;&nbsp; </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/sources&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;sharedListeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;add name=&quot;xml&quot;
+type=&quot;System.Diagnostics.XmlWriterTraceListener&quot;
+initializeData=&quot;trace.e2e&quot; /&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/sharedListeners&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;trace autoflush=&quot;true&quot; /&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/system.diagnostics&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'>&nbsp;&lt;/configuration&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><br>
+Please note that in order to read the <b>trace.e2e</b> file that is created,
+you will need to download SvcTraceViewer.exe. This can be downloaded as part of
+the .NET Framework 3.5 SDK. More information about the .NET Framework can be
+found at <a href="http://msdn.microsoft.com/en-us/netframework/cc378097.aspx">http://msdn.microsoft.com/en-us/netframework/cc378097.aspx</a>.
+</p>
+
+<h2><a name="_Toc202407809"></a><span style='font-family:"Calibri","sans-serif"'>Known
+Issues</span></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'>1.<span style='font-size:7.0pt;
+line-height:115%;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>All the components in a given sample (such as STS, RP) are designed to
+run in a single system and not across multiple systems. Do not use the sample
+code ‘as is’ in production code, performance/scalability considerations should
+be addressed.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>2. If you are using Windows Server
+2003 SP2 and haven’t registered SHA-256 before, you will see an exception that
+the “Object identifier (OID) is unknown.” This is because the default hashing
+algorithm that WIF uses is SHA-256 and this is not registered by default on a
+machine with Windows Server 2003 SP2 operating system. Follow the below
+instructions to register SHA-256 on such a machine:</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in;line-height:normal'><span
+style='color:black'>- Browse to <a
+href="http://www.codeplex.com/clrsecurity/SourceControl/changeset/view/18423">http://www.codeplex.com/clrsecurity/SourceControl/changeset/view/18423</a>
+and click &quot;Download&quot;.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in;line-height:normal'><span
+style='color:black'><a
+href="http://www.codeplex.com/clrsecurity/SourceControl/changeset/view/18423"><span
+style='color:black;text-decoration:none'>&nbsp;</span></a></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in;line-height:normal'><span
+style='color:black'>- Unzip and build the downloaded
+Security.Cryptography\src\Security.Cryptography.csproj VS project.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in;line-height:normal'><span
+style='color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:.5in;line-height:normal'><span style='color:black'>- Write a
+program to call Security.Cryptography.Oid2.RegisterSha2OidInformationForRsa().</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:.5in;line-height:normal'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:.5in;line-height:normal'><span style='color:black'>- Execute that
+program once, which would register SHA-256 OID with the OS.</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:.5in;line-height:normal'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:.5in;line-height:normal'><span style='color:black'>- If this is a
+64-bit architecture, you must also recompile the program for the x86 platform
+and execute it. This is because Visual Studio is a 32-bit application and
+requires that the same changes be made in the 32-bit registry.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-autospace:none'><span
+style='color:black'>      3. </span>Side-by-side installation of WIF SDKs is
+not supported. It is recommended not to try out the samples and template
+add-ins from both the SDKs side-by-side on a system. The functionalities
+illustrated in the samples of both WIF SDKs are the same and hence trying out
+one WIF SDK package would cover all the functionalities. Refer to <a
+href="http://go.microsoft.com/fwlink/?LinkId=187957">WIF Documentation Site</a>
+for information on known issues when trying out both the SDKs side-by-side.</p>
+
+<p class=MsoListParagraph style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:.5in;line-height:normal'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

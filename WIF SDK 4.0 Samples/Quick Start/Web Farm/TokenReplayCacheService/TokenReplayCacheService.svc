@@ -1,0 +1,1 @@
+﻿<%@ServiceHost language=C# Factory="TokenReplayCacheService.CustomServiceHostFactory" Service="TokenReplayCacheService.TokenReplayCacheService"%>

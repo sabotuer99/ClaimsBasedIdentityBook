@@ -1,0 +1,4 @@
+<%@ServiceHost  
+    language="c#"
+    Factory="UserNameCardStsHostFactory" 
+    Service="CustomSecurityTokenServiceConfiguration" %>

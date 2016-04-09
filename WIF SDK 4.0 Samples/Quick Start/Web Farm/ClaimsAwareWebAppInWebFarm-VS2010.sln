@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PassiveRedirectBasedClaimsAwareWebAppInWebFarm", "PassiveRedirectBasedClaimsAwareWebAppInWebFarm\", "{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ClaimsAwareWebAppInWebFarm"
+		Debug.AspNetCompiler.PhysicalPath = "PassiveRedirectBasedClaimsAwareWebAppInWebFarm\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ClaimsAwareWebAppInWebFarm\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ClaimsAwareWebAppInWebFarm"
+		Release.AspNetCompiler.PhysicalPath = "PassiveRedirectBasedClaimsAwareWebAppInWebFarm\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ClaimsAwareWebAppInWebFarm\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61709"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PassiveSTS", "PassiveSTS\", "{06B7CE61-A9A4-4958-99AD-44C18FDD8766}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/PassiveSTSForClaimsAwareWebAppInWebFarm"
+		Debug.AspNetCompiler.PhysicalPath = "PassiveSTS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PassiveSTSForClaimsAwareWebAppInWebFarm\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PassiveSTSForClaimsAwareWebAppInWebFarm"
+		Release.AspNetCompiler.PhysicalPath = "PassiveSTS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PassiveSTSForClaimsAwareWebAppInWebFarm\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61710"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenReplayCacheService-VS2010", "TokenReplayCacheService\TokenReplayCacheService-VS2010.csproj", "{22C82B0E-44E7-412E-9373-43130C6601A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Debug|.NET.ActiveCfg = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Debug|.NET.Build.0 = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Release|.NET.ActiveCfg = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Release|.NET.Build.0 = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{224E8F2D-90F6-4A54-95B4-B3E80DCD5608}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Debug|.NET.ActiveCfg = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Debug|.NET.Build.0 = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Release|.NET.ActiveCfg = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Release|.NET.Build.0 = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{06B7CE61-A9A4-4958-99AD-44C18FDD8766}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Release|.NET.ActiveCfg = Release|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{22C82B0E-44E7-412E-9373-43130C6601A8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

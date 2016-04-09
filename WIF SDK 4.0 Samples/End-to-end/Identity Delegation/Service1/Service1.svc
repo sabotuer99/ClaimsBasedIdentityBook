@@ -1,0 +1,1 @@
+﻿<%@ServiceHost language=C# Factory="Service1.CustomServiceHostFactory" Service="Service1.Service1"%>

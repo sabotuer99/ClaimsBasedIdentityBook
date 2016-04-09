@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CustomUserNameCardStsHostFactory", "CustomUserNameCardStsHostFactory\", "{5AA19681-577E-4873-9DCE-3FE1F88CABDD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/CustomUserNameCardStsHostFactory"
+		Debug.AspNetCompiler.PhysicalPath = "CustomUserNameCardStsHostFactory\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CustomUserNameCardStsHostFactory\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CustomUserNameCardStsHostFactory"
+		Release.AspNetCompiler.PhysicalPath = "CustomUserNameCardStsHostFactory\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CustomUserNameCardStsHostFactory\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58983"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CustomUserNameCardStsHostFactoryWebSite", "CustomUserNameCardStsHostFactoryWebSite\", "{F1D35A38-BEAE-49DA-9864-E3C1DE22343F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/CustomUserNameCardStsHostFactoryWebSite"
+		Debug.AspNetCompiler.PhysicalPath = "CustomUserNameCardStsHostFactoryWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CustomUserNameCardStsHostFactoryWebSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CustomUserNameCardStsHostFactoryWebSite"
+		Release.AspNetCompiler.PhysicalPath = "CustomUserNameCardStsHostFactoryWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CustomUserNameCardStsHostFactoryWebSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58984"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AA19681-577E-4873-9DCE-3FE1F88CABDD}.Debug|.NET.ActiveCfg = Debug|.NET
+		{5AA19681-577E-4873-9DCE-3FE1F88CABDD}.Debug|.NET.Build.0 = Debug|.NET
+		{F1D35A38-BEAE-49DA-9864-E3C1DE22343F}.Debug|.NET.ActiveCfg = Debug|.NET
+		{F1D35A38-BEAE-49DA-9864-E3C1DE22343F}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

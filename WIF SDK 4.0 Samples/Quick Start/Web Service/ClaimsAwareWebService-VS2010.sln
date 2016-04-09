@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client-VS2010.csproj", "{CB06125B-DD5F-41D2-92AF-C054A733F149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsAwareWebService", "ClaimsAwareWebService\ClaimsAwareWebService-VS2010.csproj", "{3602BE02-C5B2-4EAF-9C51-6F237476BEEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityTokenService", "SecurityTokenService\SecurityTokenService-VS2010.csproj", "{C0A11866-3F07-4519-8051-DCFB8ACA8CF1}"
+EndProject
+Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(ProjectConfigurationPlatforms) = postSolution
+{CB06125B-DD5F-41D2-92AF-C054A733F149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{CB06125B-DD5F-41D2-92AF-C054A733F149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{CB06125B-DD5F-41D2-92AF-C054A733F149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{CB06125B-DD5F-41D2-92AF-C054A733F149}.Release|Any CPU.Build.0 = Release|Any CPU
+{3602BE02-C5B2-4EAF-9C51-6F237476BEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{3602BE02-C5B2-4EAF-9C51-6F237476BEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{3602BE02-C5B2-4EAF-9C51-6F237476BEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{3602BE02-C5B2-4EAF-9C51-6F237476BEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+{C0A11866-3F07-4519-8051-DCFB8ACA8CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{C0A11866-3F07-4519-8051-DCFB8ACA8CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{C0A11866-3F07-4519-8051-DCFB8ACA8CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{C0A11866-3F07-4519-8051-DCFB8ACA8CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+EndGlobalSection
+GlobalSection(SolutionProperties) = preSolution
+HideSolutionNode = FALSE
+EndGlobalSection
+EndGlobal

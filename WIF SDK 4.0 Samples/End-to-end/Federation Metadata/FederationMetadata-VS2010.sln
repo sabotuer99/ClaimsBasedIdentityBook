@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClientWebSite", "ClientWebSite\", "{2A8F30F8-D0C2-47B3-9889-021DC574A571}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ClientWebSite"
+		Debug.AspNetCompiler.PhysicalPath = "ClientWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ClientWebSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ClientWebSite"
+		Release.AspNetCompiler.PhysicalPath = "ClientWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ClientWebSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "24240"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{E2366910-0916-4E27-82BE-3A5091A7BDB7} = {E2366910-0916-4E27-82BE-3A5091A7BDB7}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "STSService", "STSService\", "{D9C52F9D-AA4A-4274-9213-4EF25F37481D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/STSService"
+		Debug.AspNetCompiler.PhysicalPath = "STSService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\STSService\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/STSService"
+		Release.AspNetCompiler.PhysicalPath = "STSService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\STSService\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "21402"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClaimsAwareService", "ClaimsAwareService\", "{E2366910-0916-4E27-82BE-3A5091A7BDB7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ClaimsAwareService"
+		Debug.AspNetCompiler.PhysicalPath = "ClaimsAwareService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ClaimsAwareService\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ClaimsAwareService"
+		Release.AspNetCompiler.PhysicalPath = "ClaimsAwareService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ClaimsAwareService\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "24242"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A8F30F8-D0C2-47B3-9889-021DC574A571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8F30F8-D0C2-47B3-9889-021DC574A571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C52F9D-AA4A-4274-9213-4EF25F37481D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C52F9D-AA4A-4274-9213-4EF25F37481D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2366910-0916-4E27-82BE-3A5091A7BDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2366910-0916-4E27-82BE-3A5091A7BDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

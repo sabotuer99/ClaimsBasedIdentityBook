@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AuthAssuranceRP", "AuthAssuranceRP\", "{949A6412-6000-4E8C-B609-DB5011E1EE84}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/AuthAssuranceRP"
+		Debug.AspNetCompiler.PhysicalPath = "AuthAssuranceRP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AuthAssuranceRP\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AuthAssuranceRP"
+		Release.AspNetCompiler.PhysicalPath = "AuthAssuranceRP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AuthAssuranceRP\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59242"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AuthAssuranceSTS", "AuthAssuranceSTS\", "{A5DEEE8D-E856-4B83-95FC-9244A756D09F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/AuthAssuranceSTS"
+		Debug.AspNetCompiler.PhysicalPath = "AuthAssuranceSTS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AuthAssuranceSTS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AuthAssuranceSTS"
+		Release.AspNetCompiler.PhysicalPath = "AuthAssuranceSTS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AuthAssuranceSTS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55664"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Debug|.NET.ActiveCfg = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Debug|.NET.Build.0 = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Release|.NET.ActiveCfg = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Release|.NET.Build.0 = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{949A6412-6000-4E8C-B609-DB5011E1EE84}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Debug|.NET.ActiveCfg = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Debug|.NET.Build.0 = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Release|.NET.ActiveCfg = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Release|.NET.Build.0 = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{A5DEEE8D-E856-4B83-95FC-9244A756D09F}.Release|Mixed Platforms.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

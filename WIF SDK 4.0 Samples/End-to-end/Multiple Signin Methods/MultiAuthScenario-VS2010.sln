@@ -1,0 +1,78 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RelyingParty", "RelyingParty\", "{B70E3E7A-6B65-4067-AFAB-5C85EBDD978C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/RelyingParty"
+		Debug.AspNetCompiler.PhysicalPath = "RelyingParty\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\RelyingParty\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/RelyingParty"
+		Release.AspNetCompiler.PhysicalPath = "RelyingParty\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\RelyingParty\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53312"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "STSWindows", "STSWindows\", "{61CAFBC9-5089-4A14-9026-D1336DA1DA20}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/STSWindows"
+		Debug.AspNetCompiler.PhysicalPath = "STSWindows\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\STSWindows\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/STSWindows"
+		Release.AspNetCompiler.PhysicalPath = "STSWindows\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\STSWindows\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53313"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "STSForms", "STSForms\", "{22928728-E4A7-4A22-856F-E3B69C833A60}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/STSForms"
+		Debug.AspNetCompiler.PhysicalPath = "STSForms\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\STSForms\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/STSForms"
+		Release.AspNetCompiler.PhysicalPath = "STSForms\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\STSForms\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53314"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B70E3E7A-6B65-4067-AFAB-5C85EBDD978C}.Debug|.NET.ActiveCfg = Debug|.NET
+		{B70E3E7A-6B65-4067-AFAB-5C85EBDD978C}.Debug|.NET.Build.0 = Debug|.NET
+		{61CAFBC9-5089-4A14-9026-D1336DA1DA20}.Debug|.NET.ActiveCfg = Debug|.NET
+		{61CAFBC9-5089-4A14-9026-D1336DA1DA20}.Debug|.NET.Build.0 = Debug|.NET
+		{22928728-E4A7-4A22-856F-E3B69C833A60}.Debug|.NET.ActiveCfg = Debug|.NET
+		{22928728-E4A7-4A22-856F-E3B69C833A60}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

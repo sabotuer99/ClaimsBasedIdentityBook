@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ClaimsAwareService.QuoteService" CodeBehind="~/App_Code/QuoteService.cs" %>
