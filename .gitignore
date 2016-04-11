@@ -4,3 +4,5 @@ obj/
 *.suo
 /Backup*/
 UpgradeLog*.htm
+6-FederationAndAcs/Code/Adatum.FederationProvider.6/FederationMetadata/2007-06/adatum.pfx
+6-FederationAndAcs/Code/Adatum.FederationProvider.6/FederationMetadata/2007-06/localhost.pfx

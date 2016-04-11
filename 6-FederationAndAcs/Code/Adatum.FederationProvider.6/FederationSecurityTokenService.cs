@@ -123,7 +123,7 @@ namespace Adatum.FederationProvider
                     originalIssuer = string.Concat(originalIssuer, "LiveID");
                     break;
 
-                case "Facebook-194130697287302":
+                case "Facebook-596390297202303":
                     nameClaimValue = input.Claims.Where(c => c.ClaimType.Equals(ClaimTypes.Name)).FirstOrDefault().Value;
                     originalIssuer = string.Concat(originalIssuer, "Facebook");
                     break;

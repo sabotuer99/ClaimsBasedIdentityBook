@@ -63,7 +63,7 @@ namespace Adatum.FederationProvider
             // Facebook
             homeRealmIdentifier = "facebook.com";
             issuerLocation = this.AcsIssuerEndpoint;
-            whr = "Facebook-194130697287302";
+            whr = "Facebook-596390297202303";
             this.issuers.Add(homeRealmIdentifier, new IssuerInfo(homeRealmIdentifier, issuerLocation, whr));
         }
 

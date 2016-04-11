@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared Code\ACS.ServiceManagementWrapper\ACS.ServiceManagementWrapper.csproj">
-      <Project>{309877C5-0AAA-4BED-BBA7-F67795B17D0F}</Project>
+      <Project>{309877c5-0aaa-4bed-bba7-f67795b17d0f}</Project>
       <Name>ACS.ServiceManagementWrapper</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Shared Code\Samples.Web.ClaimsUtilities\Samples.Web.ClaimsUtilities.csproj">
