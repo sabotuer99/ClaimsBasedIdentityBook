@@ -56,7 +56,11 @@ namespace FShipping.Controllers
 
                 string issuer = FederatedAuthentication.WSFederationAuthenticationModule.Issuer;
                 var signOut = new SignOutRequestMessage(new Uri(issuer));
-                return this.Redirect(signOut.WriteQueryString());
+
+
+                var redirectUrl = signOut.WriteQueryString();
+
+                return this.Redirect(redirectUrl);
             }
 
             return this.RedirectToAction("Index");

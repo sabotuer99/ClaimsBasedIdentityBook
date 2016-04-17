@@ -1,0 +1,89 @@
+﻿<t:RequestSecurityTokenResponse Context="https://localhost/f-Shipping.7/adatum/" xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust">
+  <t:Lifetime>
+    <wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T17:53:40.462Z</wsu:Created>
+    <wsu:Expires xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T18:03:40.462Z</wsu:Expires>
+  </t:Lifetime>
+  <wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>https://localhost/f-shipping.7/adatum</Address>
+    </EndpointReference>
+  </wsp:AppliesTo>
+  <t:RequestedSecurityToken>
+    <Assertion ID="_3a979a3e-e43f-4ac9-bb89-dc3683f464de" IssueInstant="2016-04-17T17:53:40.477Z" Version="2.0" xmlns="urn:oasis:names:tc:SAML:2.0:assertion">
+      <Issuer>https://federated-access-control.accesscontrol.windows.net/</Issuer>
+      <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+          <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+          <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+          <ds:Reference URI="#_3a979a3e-e43f-4ac9-bb89-dc3683f464de">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <ds:DigestValue>QD0tCn+nSDS8kqEtsjIHCAusbWuHjhwxWOOlbpkitN0=</ds:DigestValue>
+          </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>PBYTIwPsL1lrxAYaehEO+fwS9FprNPz5vSH47gsVg80fv2ZBIiWvefuWbqdA0WCwPKrWFsOlWInixnIZB09zybZbUaIssWqB1Qtct24g0W5cA4RYa/BP6CSWfknbeMZWHGUhJEjnQuBsoTlDq1lTY4su0BgQEomfjtycWRJc9TQ=</ds:SignatureValue>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIIBsTCCAV+gAwIBAgIQnkD0yRqBpp5KCEgX2C7GnTAJBgUrDgMCHQUAMBYxFDASBgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTA3MDEyNDAwMDcyM1oXDTM5MTIzMTIzNTk1OVowFDESMBAGA1UEAxMJbG9jYWxob3N0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsrC4UvSuh6n0fhBGasGv53UEFy0r3FI7neDfPGASYLJjdMTaqic13nCuYYXd7LQ+o8J0NzrVRz0sVX4Av54XEQFxh48f4OjmA+ipodZ/YK9W6vy47zW4uuCJn1pLCbRFVIa/gX3cWu7ft0Rp5773kpmchkIbEMBSU8NHbHJWcKwIDAQABo0swSTBHBgNVHQEEQDA+gBAS5AktBh0dTwCNYSHcFmRjoRgwFjEUMBIGA1UEAxMLUm9vdCBBZ2VuY3mCEAY3bACqAGSKEc+41KpcNfQwCQYFKw4DAh0FAANBABwO6D93Sf2m90K14gTHUSNwhlE4rAO4dormQ/0kHa69iklZpMEipuMLejwhCmU/YLfLTYby26Yi+MQxtAQOUWE=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </ds:Signature>
+      <Subject>
+        <SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer" />
+      </Subject>
+      <Conditions NotBefore="2016-04-17T17:53:40.462Z" NotOnOrAfter="2016-04-17T18:03:40.462Z">
+        <AudienceRestriction>
+          <Audience>https://localhost/f-shipping.7/adatum</Audience>
+        </AudienceRestriction>
+      </Conditions>
+      <AttributeStatement>
+        <Attribute Name="http://schemas.fabrikam.com/claims/2009/08/organization">
+          <AttributeValue>adatum</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
+          <AttributeValue>mary</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+          <AttributeValue>Mary</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+          <AttributeValue>May</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress">
+          <AttributeValue>164 Big Lake Av.</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince">
+          <AttributeValue>WA</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country">
+          <AttributeValue>United States</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.fabrikam.com/claims/2009/08/costcenter">
+          <AttributeValue>CC-4567-ACCOUNTANCY</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/role">
+          <AttributeValue>Shipment Creator</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider">
+          <AttributeValue>https://localhost/Adatum.SimulatedIssuer.7/</AttributeValue>
+        </Attribute>
+      </AttributeStatement>
+    </Assertion>
+  </t:RequestedSecurityToken>
+  <t:RequestedAttachedReference>
+    <SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_3a979a3e-e43f-4ac9-bb89-dc3683f464de</KeyIdentifier>
+    </SecurityTokenReference>
+  </t:RequestedAttachedReference>
+  <t:RequestedUnattachedReference>
+    <SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_3a979a3e-e43f-4ac9-bb89-dc3683f464de</KeyIdentifier>
+    </SecurityTokenReference>
+  </t:RequestedUnattachedReference>
+  <t:TokenType>urn:oasis:names:tc:SAML:2.0:assertion</t:TokenType>
+  <t:RequestType>http://schemas.xmlsoap.org/ws/2005/02/trust/Issue</t:RequestType>
+  <t:KeyType>http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey</t:KeyType>
+</t:RequestSecurityTokenResponse>

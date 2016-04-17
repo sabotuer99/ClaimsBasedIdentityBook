@@ -1,0 +1,269 @@
+﻿<trust:RequestSecurityTokenResponseCollection xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+  <trust:RequestSecurityTokenResponse Context="cHI9d3NmZWRlcmF0aW9uJnJtPWh0dHBzJTNhJTJmJTJmbG9jYWxob3N0JTJmZi1zaGlwcGluZy43JTJmbGl0d2FyZSZjeD1odHRwcyUzYSUyZiUyZmxvY2FsaG9zdCUyZmYtU2hpcHBpbmcuNyUyZmxpdHdhcmUlMmY1">
+    <trust:Lifetime>
+      <wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T16:28:37.691Z</wsu:Created>
+      <wsu:Expires xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T17:28:37.691Z</wsu:Expires>
+    </trust:Lifetime>
+    <wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>https://federated-access-control.accesscontrol.windows.net/</Address>
+      </EndpointReference>
+    </wsp:AppliesTo>
+    <trust:RequestedSecurityToken>
+      <Assertion ID="_0af9a5aa-3d3c-4ce8-9d61-6f18875d108d" IssueInstant="2016-04-17T16:28:37.691Z" Version="2.0" xmlns="urn:oasis:names:tc:SAML:2.0:assertion">
+        <Issuer>https://localhost/Litware.SimulatedIssuer.7/</Issuer>
+        <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+          <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+            <ds:Reference URI="#_0af9a5aa-3d3c-4ce8-9d61-6f18875d108d">
+              <ds:Transforms>
+                <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+                <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+              </ds:Transforms>
+              <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+              <ds:DigestValue>9FuBJwuAJOgy/teLvfM6Rm/OdAUo7W2Z+Vt0ecEwtjk=</ds:DigestValue>
+            </ds:Reference>
+          </ds:SignedInfo>
+          <ds:SignatureValue>zLYY8alT4acO1Q0EVeyOdOd+B8tThPkRis1WFtSgyLwnWYzZFaVD+465mq7eVZBP97vLuDAnln6KjvxiFhi5996Qf8XOeiMejGluWVWnOxymyYLt6hgRWFrgd5gaEac8+sND7vc3+pWUNO/kG5O3o7U5dexwS0IcMqTgFYNk5mY=</ds:SignatureValue>
+          <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <X509Data>
+              <X509Certificate>MIIB6DCCAVWgAwIBAgIQWkHDFy4VOplC20cZV9WRbDAJBgUrDgMCHQUAMBIxEDAOBgNVBAMTB2xpdHdhcmUwHhcNMDAwMTAxMDMwMDAwWhcNMzYwMTAxMDMwMDAwWjASMRAwDgYDVQQDEwdsaXR3YXJlMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDpPlzF5zAyiMqym6P3DCR2s0Bvkpdw+v3zhX3eQRu0gPjYKKUNdQN5lH9Pd3TqbXNOAn8t/wgjl6v4TnrI4bwezG7ou30tFtbWvShHQkE0XeaDyXEASP+ZeZOtsWs9xHK4V62XWcFq/htuOJSkGvtJLN8xDm7jOdj9CfHJu6nwLwIDAQABo0cwRTBDBgNVHQEEPDA6gBCcJIo2RfD9n7bH0+BU6BdToRQwEjEQMA4GA1UEAxMHbGl0d2FyZYIQWkHDFy4VOplC20cZV9WRbDAJBgUrDgMCHQUAA4GBAL5d/8n8UmYIrlA5KA2UxYFgCu7wTKiLkgFw/oEe7cw7BqgaKVJsIGvuGWeusU9jsarClNjopuWVVNAT3gZ3PNH0w5Sy5eRLOEg/ethaRRIbOUTAwTxoGfWDBXwzOmomdzBhaW9zWEaxaTCiRdNbJczbsSov7FhWgUitvS6JhHdg</X509Certificate>
+            </X509Data>
+          </KeyInfo>
+        </ds:Signature>
+        <Subject>
+          <SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer" />
+        </Subject>
+        <Conditions NotBefore="2016-04-17T16:28:37.691Z" NotOnOrAfter="2016-04-17T17:28:37.691Z">
+          <AudienceRestriction>
+            <Audience>https://federated-access-control.accesscontrol.windows.net/</Audience>
+          </AudienceRestriction>
+        </Conditions>
+        <AttributeStatement>
+          <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
+            <AttributeValue>rick</AttributeValue>
+          </Attribute>
+          <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+            <AttributeValue>Rick</AttributeValue>
+          </Attribute>
+          <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+            <AttributeValue>Rico</AttributeValue>
+          </Attribute>
+          <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress">
+            <AttributeValue>51 Wide Rd.</AttributeValue>
+          </Attribute>
+          <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince">
+            <AttributeValue>WA</AttributeValue>
+          </Attribute>
+          <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country">
+            <AttributeValue>United States</AttributeValue>
+          </Attribute>
+          <Attribute Name="http://schemas.litware.com/claims/2009/08/costcenter">
+            <AttributeValue>Sales</AttributeValue>
+          </Attribute>
+          <Attribute Name="http://schemas.xmlsoap.org/claims/group">
+            <AttributeValue>Sales</AttributeValue>
+          </Attribute>
+        </AttributeStatement>
+      </Assertion>
+    </trust:RequestedSecurityToken>
+    <trust:RequestedAttachedReference>
+      <SecurityTokenReference d4p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d4p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+        <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_0af9a5aa-3d3c-4ce8-9d61-6f18875d108d</KeyIdentifier>
+      </SecurityTokenReference>
+    </trust:RequestedAttachedReference>
+    <trust:RequestedUnattachedReference>
+      <SecurityTokenReference d4p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d4p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+        <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_0af9a5aa-3d3c-4ce8-9d61-6f18875d108d</KeyIdentifier>
+      </SecurityTokenReference>
+    </trust:RequestedUnattachedReference>
+    <trust:TokenType>urn:oasis:names:tc:SAML:2.0:assertion</trust:TokenType>
+    <trust:RequestType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue</trust:RequestType>
+    <trust:KeyType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+  </trust:RequestSecurityTokenResponse>
+</trust:RequestSecurityTokenResponseCollection>
+
+
+<t:RequestSecurityTokenResponse Context="https://localhost/f-Shipping.7/litware/" xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust">
+  <t:Lifetime>
+    <wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T16:32:00.943Z</wsu:Created>
+    <wsu:Expires xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T16:42:00.943Z</wsu:Expires>
+  </t:Lifetime>
+  <wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>https://localhost/f-shipping.7/litware</Address>
+    </EndpointReference>
+  </wsp:AppliesTo>
+  <t:RequestedSecurityToken>
+    <Assertion ID="_5508e509-1ca3-479e-9531-27da65a61642" IssueInstant="2016-04-17T16:32:00.943Z" Version="2.0" xmlns="urn:oasis:names:tc:SAML:2.0:assertion">
+      <Issuer>https://federated-access-control.accesscontrol.windows.net/</Issuer>
+      <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+          <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+          <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+          <ds:Reference URI="#_5508e509-1ca3-479e-9531-27da65a61642">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <ds:DigestValue>CMgCt6upsra77JX24Bvx8H4/YiXVTVE1M62r61MmF0M=</ds:DigestValue>
+          </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>D0dvhqzhiAHx/ADKb0zmbn3g8LfZ4mdkB1NidStPofwQITV7y4ciQhHPuCBJlejRuRyE6wMilBgJJqp+KK8kWy8IEZFHMmPj2JBWiujel4yfKlLupJh20Lgq7H9K/hmduZoRC20WGGkHF/UDcnQkhBJ9fuUxyVtwXRsuILxAeMI=</ds:SignatureValue>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIIBsTCCAV+gAwIBAgIQnkD0yRqBpp5KCEgX2C7GnTAJBgUrDgMCHQUAMBYxFDASBgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTA3MDEyNDAwMDcyM1oXDTM5MTIzMTIzNTk1OVowFDESMBAGA1UEAxMJbG9jYWxob3N0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsrC4UvSuh6n0fhBGasGv53UEFy0r3FI7neDfPGASYLJjdMTaqic13nCuYYXd7LQ+o8J0NzrVRz0sVX4Av54XEQFxh48f4OjmA+ipodZ/YK9W6vy47zW4uuCJn1pLCbRFVIa/gX3cWu7ft0Rp5773kpmchkIbEMBSU8NHbHJWcKwIDAQABo0swSTBHBgNVHQEEQDA+gBAS5AktBh0dTwCNYSHcFmRjoRgwFjEUMBIGA1UEAxMLUm9vdCBBZ2VuY3mCEAY3bACqAGSKEc+41KpcNfQwCQYFKw4DAh0FAANBABwO6D93Sf2m90K14gTHUSNwhlE4rAO4dormQ/0kHa69iklZpMEipuMLejwhCmU/YLfLTYby26Yi+MQxtAQOUWE=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </ds:Signature>
+      <Subject>
+        <SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer" />
+      </Subject>
+      <Conditions NotBefore="2016-04-17T16:32:00.943Z" NotOnOrAfter="2016-04-17T16:42:00.943Z">
+        <AudienceRestriction>
+          <Audience>https://localhost/f-shipping.7/litware</Audience>
+        </AudienceRestriction>
+      </Conditions>
+      <AttributeStatement>
+        <Attribute Name="http://schemas.fabrikam.com/claims/2009/08/organization">
+          <AttributeValue>litware</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
+          <AttributeValue>rick</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+          <AttributeValue>Rick</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+          <AttributeValue>Rico</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress">
+          <AttributeValue>51 Wide Rd.</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince">
+          <AttributeValue>WA</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country">
+          <AttributeValue>United States</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.fabrikam.com/claims/2009/08/costcenter">
+          <AttributeValue>Sales</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/role">
+          <AttributeValue>Shipment Creator</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider">
+          <AttributeValue>https://localhost/Litware.SimulatedIssuer.7/</AttributeValue>
+        </Attribute>
+      </AttributeStatement>
+    </Assertion>
+  </t:RequestedSecurityToken>
+  <t:RequestedAttachedReference>
+    <SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_5508e509-1ca3-479e-9531-27da65a61642</KeyIdentifier>
+    </SecurityTokenReference>
+  </t:RequestedAttachedReference>
+  <t:RequestedUnattachedReference>
+    <SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_5508e509-1ca3-479e-9531-27da65a61642</KeyIdentifier>
+    </SecurityTokenReference>
+  </t:RequestedUnattachedReference>
+  <t:TokenType>urn:oasis:names:tc:SAML:2.0:assertion</t:TokenType>
+  <t:RequestType>http://schemas.xmlsoap.org/ws/2005/02/trust/Issue</t:RequestType>
+  <t:KeyType>http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey</t:KeyType>
+</t:RequestSecurityTokenResponse>
+
+
+
+<t:RequestSecurityTokenResponse Context="https://localhost/f-Shipping.7/contoso/" xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust">
+  <t:Lifetime>
+    <wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T17:01:03.419Z</wsu:Created>
+    <wsu:Expires xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-17T17:11:03.419Z</wsu:Expires>
+  </t:Lifetime>
+  <wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>https://localhost/f-shipping.7/contoso</Address>
+    </EndpointReference>
+  </wsp:AppliesTo>
+  <t:RequestedSecurityToken>
+    <Assertion ID="_7039d37c-097b-4cb7-9c52-833effaa92b7" IssueInstant="2016-04-17T17:01:03.435Z" Version="2.0" xmlns="urn:oasis:names:tc:SAML:2.0:assertion">
+      <Issuer>https://federated-access-control.accesscontrol.windows.net/</Issuer>
+      <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+          <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+          <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+          <ds:Reference URI="#_7039d37c-097b-4cb7-9c52-833effaa92b7">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <ds:DigestValue>ySvxzoIb+TxzMbw/7J6TxWNf6ujVYH7pU8RUOYRZDmI=</ds:DigestValue>
+          </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>UnNRMuvnRivcl5mmVjgKCUDQFb+lrudBZJLG9dkMlzQa/zwKMQdvtP3W+IH/wpOLXQnbRE9E7GCGQrodveEzWXklQFNHwBqLjUPf/NNhXY1Iuxq5W0kElORJl4fzMmA55eDvKP8D/57YrIDUtZr04PZBBtNTCkcZwbY7nC+kTew=</ds:SignatureValue>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <X509Data>
+            <X509Certificate>MIIBsTCCAV+gAwIBAgIQnkD0yRqBpp5KCEgX2C7GnTAJBgUrDgMCHQUAMBYxFDASBgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTA3MDEyNDAwMDcyM1oXDTM5MTIzMTIzNTk1OVowFDESMBAGA1UEAxMJbG9jYWxob3N0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsrC4UvSuh6n0fhBGasGv53UEFy0r3FI7neDfPGASYLJjdMTaqic13nCuYYXd7LQ+o8J0NzrVRz0sVX4Av54XEQFxh48f4OjmA+ipodZ/YK9W6vy47zW4uuCJn1pLCbRFVIa/gX3cWu7ft0Rp5773kpmchkIbEMBSU8NHbHJWcKwIDAQABo0swSTBHBgNVHQEEQDA+gBAS5AktBh0dTwCNYSHcFmRjoRgwFjEUMBIGA1UEAxMLUm9vdCBBZ2VuY3mCEAY3bACqAGSKEc+41KpcNfQwCQYFKw4DAh0FAANBABwO6D93Sf2m90K14gTHUSNwhlE4rAO4dormQ/0kHa69iklZpMEipuMLejwhCmU/YLfLTYby26Yi+MQxtAQOUWE=</X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </ds:Signature>
+      <Subject>
+        <NameID>oZOEEoWd2mUG4fWcT7JApIkm4f9u+5YW/j5+SqdKVUE=</NameID>
+        <SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer" />
+      </Subject>
+      <Conditions NotBefore="2016-04-17T17:01:03.419Z" NotOnOrAfter="2016-04-17T17:11:03.419Z">
+        <AudienceRestriction>
+          <Audience>https://localhost/f-shipping.7/contoso</Audience>
+        </AudienceRestriction>
+      </Conditions>
+      <AttributeStatement>
+        <Attribute Name="http://schemas.fabrikam.com/claims/2009/08/costcenter">
+          <AttributeValue>None</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.fabrikam.com/claims/2009/08/organization">
+          <AttributeValue>contoso</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/role">
+          <AttributeValue>Shipment Creator</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
+          <AttributeValue>Windows Live</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country">
+          <AttributeValue>United States</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+          <AttributeValue>Social</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince">
+          <AttributeValue>WY</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/streetaddress">
+          <AttributeValue>The Cloud</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+          <AttributeValue>Social</AttributeValue>
+        </Attribute>
+        <Attribute Name="http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider">
+          <AttributeValue>uri:WindowsLiveID</AttributeValue>
+        </Attribute>
+      </AttributeStatement>
+    </Assertion>
+  </t:RequestedSecurityToken>
+  <t:RequestedAttachedReference>
+    <SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_7039d37c-097b-4cb7-9c52-833effaa92b7</KeyIdentifier>
+    </SecurityTokenReference>
+  </t:RequestedAttachedReference>
+  <t:RequestedUnattachedReference>
+    <SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_7039d37c-097b-4cb7-9c52-833effaa92b7</KeyIdentifier>
+    </SecurityTokenReference>
+  </t:RequestedUnattachedReference>
+  <t:TokenType>urn:oasis:names:tc:SAML:2.0:assertion</t:TokenType>
+  <t:RequestType>http://schemas.xmlsoap.org/ws/2005/02/trust/Issue</t:RequestType>
+  <t:KeyType>http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey</t:KeyType>
+</t:RequestSecurityTokenResponse>
