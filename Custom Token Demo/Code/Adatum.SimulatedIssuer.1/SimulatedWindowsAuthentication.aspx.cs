@@ -16,6 +16,7 @@ namespace Adatum.SimulatedIssuer
     using Microsoft.IdentityModel.Protocols.WSFederation;
     using Microsoft.IdentityModel.SecurityTokenService;
     using Microsoft.IdentityModel.Web;
+    using System.IO;
 
     public partial class SimulatedWindowsAuthentication : Page
     {
@@ -38,6 +39,7 @@ namespace Adatum.SimulatedIssuer
                     var requestMessage = (SignInRequestMessage)WSFederationMessage.CreateFromUri(this.Request.Url);
                     SignInResponseMessage responseMessage = FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(requestMessage, this.User, sts);
                     FederatedPassiveSecurityTokenServiceOperations.ProcessSignInResponse(responseMessage, this.Response);
+                    var response = this.Response;
                 }
             }
             else if (action == WSFederationConstants.Actions.SignOut || action == WSFederationConstants.Actions.SignOutCleanup)
@@ -66,7 +68,17 @@ namespace Adatum.SimulatedIssuer
             if (this.User != null && this.User.Identity.IsAuthenticated)
             {
                 SecurityTokenService sts = new IdentityProviderSecurityTokenService(IdentityProviderSecurityTokenServiceConfiguration.Current);
-                SignInResponseMessage responseMessage = FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(requestMessage, this.User, sts);
+                
+                //This is the actual claims token
+                //SignInResponseMessage responseMessage = FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(requestMessage, this.User, sts);
+                String realm = this.Request.Params["wtrealm"];
+                String token = File.ReadAllText(@"C:\Users\troy\projects\FederatedDemos\Custom Token Demo\Code\Adatum.SimulatedIssuer.1\Token.xml");
+
+                SignInResponseMessage responseMessage = new SignInResponseMessage(new Uri(realm), token);
+                    
+
+
+
                 FederatedPassiveSecurityTokenServiceOperations.ProcessSignInResponse(responseMessage, this.Response);
             }
             else

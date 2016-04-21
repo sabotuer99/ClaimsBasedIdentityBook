@@ -70,6 +70,9 @@
     <Content Include="Styling\Images\adatum-logo.png" />
     <Content Include="Styling\Images\info-icon.jpg" />
     <Content Include="Styling\Styles.css" />
+    <Content Include="Token.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

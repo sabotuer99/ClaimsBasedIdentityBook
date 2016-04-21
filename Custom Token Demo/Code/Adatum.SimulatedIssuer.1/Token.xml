@@ -1,0 +1,61 @@
+﻿<trust:RequestSecurityTokenResponseCollection xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+  <trust:RequestSecurityTokenResponse Context="rm=0&amp;id=passive&amp;ru=%2fa-Order.CustomToken%2f">
+    <trust:Lifetime>
+      <wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-21T09:12:03.703Z</wsu:Created>
+      <wsu:Expires xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2016-04-21T10:12:03.703Z</wsu:Expires>
+    </trust:Lifetime>
+    <wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>https://localhost/a-Order.CustomToken/</Address>
+      </EndpointReference>
+    </wsp:AppliesTo>
+    <trust:RequestedSecurityToken>
+      <!-- START CUSTOM TOKEN HERE -->
+      <m:MyCustomToken
+          xmlns:m="urn:mycustomtoken"
+          m:Id="D416881A-130B-4AFF-8091-F412D7440E39"
+          m:Issuer="urn:mycustomtokenhandlersts"
+          m:Audience="https://mycustomtokenhandlerwebsite/"
+          m:ValidFrom="2011-01-01"
+          m:ValidTo="2099-12-31">
+        <m:Claim Name="GivenName" Namespace="urn:givenname">John</m:Claim>
+        <m:Claim Name="Surname" Namespace="urn:surname">Doe</m:Claim>
+        <m:Claim Name="Role" Namespace="urn:role">Manager</m:Claim>
+        <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+            <Reference URI="">
+              <Transforms>
+                <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+                <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+              </Transforms>
+              <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+              <DigestValue>gK8K+94DbXsVHxE8X3ulh45WcEM=</DigestValue>
+            </Reference>
+          </SignedInfo>
+          <SignatureValue>… removed for brevity …</SignatureValue>
+          <KeyInfo>
+            <X509Data>
+              <X509Certificate>… removed for brevity …</X509Certificate>
+            </X509Data>
+          </KeyInfo>
+        </Signature>
+      </m:MyCustomToken>
+      <!-- END CUSTOM TOKEN -->
+    </trust:RequestedSecurityToken>
+    <trust:RequestedAttachedReference>
+      <SecurityTokenReference d4p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d4p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+        <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_6e2f339d-6f75-4b08-8fff-7c1b5a4210f9</KeyIdentifier>
+      </SecurityTokenReference>
+    </trust:RequestedAttachedReference>
+    <trust:RequestedUnattachedReference>
+      <SecurityTokenReference d4p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" xmlns:d4p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+        <KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_6e2f339d-6f75-4b08-8fff-7c1b5a4210f9</KeyIdentifier>
+      </SecurityTokenReference>
+    </trust:RequestedUnattachedReference>
+    <trust:TokenType>urn:oasis:names:tc:SAML:2.0:assertion</trust:TokenType>
+    <trust:RequestType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue</trust:RequestType>
+    <trust:KeyType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+  </trust:RequestSecurityTokenResponse>
+</trust:RequestSecurityTokenResponseCollection>
