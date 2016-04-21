@@ -61,7 +61,7 @@ namespace Adatum.Portal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.1..
+        ///   Looks up a localized string similar to Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.Custom..
         /// </summary>
         internal static string aExpenseClaimsAwareDescription {
             get {
@@ -79,7 +79,7 @@ namespace Adatum.Portal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.1..
+        ///   Looks up a localized string similar to Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.Custom..
         /// </summary>
         internal static string aOrderClaimsAwareDescription {
             get {

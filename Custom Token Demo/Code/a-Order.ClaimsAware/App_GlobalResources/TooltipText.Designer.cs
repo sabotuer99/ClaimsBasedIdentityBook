@@ -61,7 +61,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hint: The &apos;Edit&apos; column can only be seen by users with the role &apos;Order Approver&apos;. The roles for each user are defined in the user claims, created in the Adatum.SimulatedIssuer.1 project, inside CustomSecurityTokenService.cs..
+        ///   Looks up a localized string similar to Hint: The &apos;Edit&apos; column can only be seen by users with the role &apos;Order Approver&apos;. The roles for each user are defined in the user claims, created in the Adatum.SimulatedIssuer.Custom project, inside CustomSecurityTokenService.cs..
         /// </summary>
         internal static string EditColumnHint {
             get {
@@ -70,7 +70,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hint: The username is read from User.Identity.Name. The value for this property is set by the Windows Identity Framework from the claim &apos;name&apos;, created in the Adatum.SimulatedIssuer.1 project, inside CustomSecurityTokenService.cs..
+        ///   Looks up a localized string similar to Hint: The username is read from User.Identity.Name. The value for this property is set by the Windows Identity Framework from the claim &apos;name&apos;, created in the Adatum.SimulatedIssuer.Custom project, inside CustomSecurityTokenService.cs..
         /// </summary>
         internal static string LoggedUsernameHint {
             get {

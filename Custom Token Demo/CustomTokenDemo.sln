@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Web.ClaimsUtilities
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Web.UI.Controls", "Shared Code\Samples.Web.UI.Controls\Samples.Web.UI.Controls.csproj", "{67F3EDE9-101B-44E6-879B-9C190FAB3C21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adatum.SimulatedIssuer.1", "Code\Adatum.SimulatedIssuer.1\Adatum.SimulatedIssuer.1.csproj", "{3C3D8804-CE66-467E-B86D-798DA99CEF75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adatum.SimulatedIssuer.Custom", "Code\Adatum.SimulatedIssuer.1\Adatum.SimulatedIssuer.Custom.csproj", "{3C3D8804-CE66-467E-B86D-798DA99CEF75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,7 +11,7 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Adatum.SimulatedIssuer.1")]
+[assembly: AssemblyTitle("Adatum.SimulatedIssuer.Custom")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]

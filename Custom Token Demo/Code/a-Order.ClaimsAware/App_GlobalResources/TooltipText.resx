@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="EditColumnHint" xml:space="preserve">
-    <value>Hint: The 'Edit' column can only be seen by users with the role 'Order Approver'. The roles for each user are defined in the user claims, created in the Adatum.SimulatedIssuer.1 project, inside CustomSecurityTokenService.cs.</value>
+    <value>Hint: The 'Edit' column can only be seen by users with the role 'Order Approver'. The roles for each user are defined in the user claims, created in the Adatum.SimulatedIssuer.Custom project, inside CustomSecurityTokenService.cs.</value>
   </data>
   <data name="LoggedUsernameHint" xml:space="preserve">
-    <value>Hint: The username is read from User.Identity.Name. The value for this property is set by the Windows Identity Framework from the claim 'name', created in the Adatum.SimulatedIssuer.1 project, inside CustomSecurityTokenService.cs.</value>
+    <value>Hint: The username is read from User.Identity.Name. The value for this property is set by the Windows Identity Framework from the claim 'name', created in the Adatum.SimulatedIssuer.Custom project, inside CustomSecurityTokenService.cs.</value>
   </data>
   <data name="SingleSignOutHint" xml:space="preserve">
     <value>Hint: When signing out from this application, you will also be signed out from the issuer who authenticated you. The issuer will also sign you out from any other applications that you've signed in to.</value>

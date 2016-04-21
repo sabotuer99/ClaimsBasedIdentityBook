@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="aExpenseClaimsAwareDescription" xml:space="preserve">
-    <value>Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.1.</value>
+    <value>Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.Custom.</value>
   </data>
   <data name="aExpenseNoClaimsDescription" xml:space="preserve">
     <value>Hint: Authentication is done using Forms Authentication. The credentials are verified against an account repository.</value>
   </data>
   <data name="aOrderClaimsAwareDescription" xml:space="preserve">
-    <value>Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.1.</value>
+    <value>Hint: Authentication for the site is delegated to Adatum.SimulatedIssuer.Custom.</value>
   </data>
   <data name="aOrderNoClaimsDescription" xml:space="preserve">
     <value>Hint: Authentication is done using Windows Authentication. The user is authenticated against the Active Directory or local machine user store.</value>
