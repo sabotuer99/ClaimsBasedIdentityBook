@@ -1,3 +1,9 @@
+April 21, 2016
+
+This repo contains three sets of code examples.  The first is the code samples from Microsoft's book "A Guide to Claims-based Identity and Access Control (2.0)".  The readme for that code is below my little blurb.  The folder "WIF SDK 4.0 Samples" contains the code samples that come with the Windows Identity Framework SDK.  Those samples have their own html readme in the root of that subfolder.  The last set of samples is in "ACS Code Samples", which are related specifically to using Azure Access Control Service.  I've added one additional folder, "Custom Token Demo", which is really just the Guide SSO sample that I've gutted and tweaked to handle custom tokens instead of SAML2.  
+
+====== Troy ======
+
 Examples Summary
 
 Microsoft Patterns & Practices
