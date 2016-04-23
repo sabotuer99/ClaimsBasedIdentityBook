@@ -80,6 +80,7 @@
     <Compile Include="MaryInc.cs" />
     <Compile Include="MyCustomToken.cs" />
     <Compile Include="MyCustomTokenHandler.cs" />
+    <Compile Include="MyCustomTokenInternal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
