@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supporting files", "Support
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adatum.Portal", "Code\Adatum.Portal\Adatum.Portal.csproj", "{3004DFA4-D6ED-431E-A6E9-63F88895F858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "a-Expense.CustomToken", "Code\a-Expense.ClaimsAware\a-Expense.CustomToken.csproj", "{D6E204A7-7FBB-442C-9942-C4EF5E1559E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "a-Expense.CustomToken", "Code\a-Expense.CustomToken\a-Expense.CustomToken.csproj", "{D6E204A7-7FBB-442C-9942-C4EF5E1559E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "a-Order.CustomToken", "Code\a-Order.ClaimsAware\a-Order.CustomToken.csproj", "{AF3837AA-CAB7-404E-9705-D12AC4A750EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "a-Order.CustomToken", "Code\a-Order.CustomToken\a-Order.CustomToken.csproj", "{AF3837AA-CAB7-404E-9705-D12AC4A750EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Web.ClaimsUtilities", "..\Shared Code\Samples.Web.ClaimsUtilities\Samples.Web.ClaimsUtilities.csproj", "{3C9C7EE0-3FE1-4F7C-AD8C-F1044B16A8DB}"
 EndProject
