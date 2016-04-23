@@ -58,6 +58,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -77,6 +78,8 @@
     <Compile Include="Fabrikam.cs" />
     <Compile Include="Litware.cs" />
     <Compile Include="MaryInc.cs" />
+    <Compile Include="MyCustomToken.cs" />
+    <Compile Include="MyCustomTokenHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
