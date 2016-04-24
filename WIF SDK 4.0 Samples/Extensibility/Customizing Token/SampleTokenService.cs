@@ -48,14 +48,14 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
             ValidateAppliesTo( request.AppliesTo );
 
             Scope scope = new Scope( request.AppliesTo.Uri.AbsoluteUri );
-            
-            scope.SigningCredentials = new X509SigningCredentials( CertificateUtil.GetCertificate( StoreName.My, StoreLocation.LocalMachine, "CN=localhost" ) );
+
+            scope.SigningCredentials = new X509SigningCredentials(CertificateUtil.GetCertificate(StoreName.Root, StoreLocation.LocalMachine, Program.thumbprint));
             
             // Note: In this sample app only a single RP identity is shown, which is localhost, and the certificate of that RP is 
             // populated as _encryptingCreds
             // If you have multiple RPs for the STS you would select the certificate that is specific to 
             // the RP that requests the token and then use that for _encryptingCreds
-            scope.EncryptingCredentials = new X509EncryptingCredentials( CertificateUtil.GetCertificate( StoreName.My, StoreLocation.LocalMachine, "CN=localhost" ) );
+            scope.EncryptingCredentials = new X509EncryptingCredentials(CertificateUtil.GetCertificate(StoreName.Root, StoreLocation.LocalMachine, Program.thumbprint));
 
             return scope;
         }

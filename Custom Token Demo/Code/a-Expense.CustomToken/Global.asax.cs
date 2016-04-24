@@ -67,17 +67,18 @@ namespace AExpense
         {
             // Use the <serviceCertificate> to protect the cookies that are
             // sent to the client.
-            var sessionTransforms =
-                new List<CookieTransform>(
-                    new CookieTransform[]
-                        {
-                            new DeflateCookieTransform(), 
-                            new RsaEncryptionCookieTransform(e.ServiceConfiguration.ServiceCertificate), 
-                            new RsaSignatureCookieTransform(e.ServiceConfiguration.ServiceCertificate)
-                        });
-            var sessionHandler = new SessionSecurityTokenHandler(sessionTransforms.AsReadOnly());
 
-            e.ServiceConfiguration.SecurityTokenHandlers.AddOrReplace(sessionHandler);
+            //var sessionTransforms =
+            //    new List<CookieTransform>(
+            //        new CookieTransform[]
+            //            {
+            //                new DeflateCookieTransform(), 
+            //                new RsaEncryptionCookieTransform(e.ServiceConfiguration.ServiceCertificate), 
+            //                new RsaSignatureCookieTransform(e.ServiceConfiguration.ServiceCertificate)
+            //            });
+            //var sessionHandler = new SessionSecurityTokenHandler(sessionTransforms.AsReadOnly());
+
+            //e.ServiceConfiguration.SecurityTokenHandlers.AddOrReplace(sessionHandler);
         }
 
         private void Application_Start(object sender, EventArgs e)

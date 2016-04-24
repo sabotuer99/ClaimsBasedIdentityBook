@@ -35,9 +35,11 @@ namespace Adatum.SimulatedIssuer
                 // Process signin request.
                 if (SimulatedWindowsAuthenticationOperations.TryToAuthenticateUser(this.Context, this.Request, this.Response))
                 {
+                    //This is the second time through
                     SecurityTokenService sts = new IdentityProviderSecurityTokenService(IdentityProviderSecurityTokenServiceConfiguration.Current);
                     var requestMessage = (SignInRequestMessage)WSFederationMessage.CreateFromUri(this.Request.Url);
                     SignInResponseMessage responseMessage = FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(requestMessage, this.User, sts);
+                    //responseMessage = getMessage();
                     FederatedPassiveSecurityTokenServiceOperations.ProcessSignInResponse(responseMessage, this.Response);
                     var response = this.Response;
                 }
@@ -62,23 +64,26 @@ namespace Adatum.SimulatedIssuer
             base.OnLoad(e);
         }
 
+        private SignInResponseMessage getMessage()
+        {
+            String realm = this.Request.Params["wtrealm"];
+            String token = File.ReadAllText(@"C:\Users\troy\projects\FederatedDemos\Custom Token Demo\Code\Adatum.SimulatedIssuer.1\Token.xml");
+            SignInResponseMessage responseMessage = new SignInResponseMessage(new Uri(realm), token);
+
+            return responseMessage;
+        }
+
         private void HandleSignInRequest()
         {
             var requestMessage = (SignInRequestMessage)WSFederationMessage.CreateFromUri(this.Request.Url);
             if (this.User != null && this.User.Identity.IsAuthenticated)
             {
+                //This runs on the first pass
                 SecurityTokenService sts = new IdentityProviderSecurityTokenService(IdentityProviderSecurityTokenServiceConfiguration.Current);
-                
-                //This is the actual claims token
-                //SignInResponseMessage responseMessage = FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(requestMessage, this.User, sts);
-                String realm = this.Request.Params["wtrealm"];
-                String token = File.ReadAllText(@"C:\Users\troy\projects\FederatedDemos\Custom Token Demo\Code\Adatum.SimulatedIssuer.1\Token.xml");
+                SignInResponseMessage responseMessage = FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(requestMessage, this.User, sts);
 
-                SignInResponseMessage responseMessage = new SignInResponseMessage(new Uri(realm), token);
+                responseMessage = getMessage();
                     
-
-
-
                 FederatedPassiveSecurityTokenServiceOperations.ProcessSignInResponse(responseMessage, this.Response);
             }
             else

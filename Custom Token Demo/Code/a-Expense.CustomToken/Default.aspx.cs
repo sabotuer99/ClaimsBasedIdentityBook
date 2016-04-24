@@ -24,7 +24,7 @@ namespace AExpense
         {
             get
             {
-                return new List<string> { Adatum.Roles.Employee, Adatum.Roles.Accountant };
+                return new List<string> { Adatum.Roles.Employee, Adatum.Roles.Accountant, "Manager" };
             }
         }
 

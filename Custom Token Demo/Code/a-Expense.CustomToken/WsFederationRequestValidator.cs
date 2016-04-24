@@ -19,6 +19,7 @@ namespace AExpense
     {
         protected override bool IsValidRequestString(HttpContext context, string value, RequestValidationSource requestValidationSource, string collectionKey, out int validationFailureIndex)
         {
+
             validationFailureIndex = 0;
             if (requestValidationSource == RequestValidationSource.Form &&
                 collectionKey.Equals(WSFederationConstants.Parameters.Result, StringComparison.Ordinal))

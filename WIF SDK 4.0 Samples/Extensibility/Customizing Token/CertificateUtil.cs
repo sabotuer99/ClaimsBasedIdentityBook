@@ -35,16 +35,15 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
                 // Every time we call store.Certificates property, a new collection will be returned.
                 //
                 certificates = store.Certificates; 
-               
 
                 for ( int i = 0; i < certificates.Count; i++ )
                 {
                     X509Certificate2 cert = certificates[i];
 
-                    if ( cert.SubjectName.Name.ToLower() == subjectName.ToLower() )
+                    if (cert.Thumbprint == subjectName)
                     {
                         if ( result != null )
-                            throw new ApplicationException( string.Format( "There are more than one certificate was found for subject Name {0}", subjectName ) );
+                            throw new ApplicationException( string.Format( "There are more than one certificate was found for thumbprint {0}", subjectName ) );
 
                         result = new X509Certificate2(cert);
                     }
@@ -52,7 +51,7 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
 
                 if ( result == null )
                 {
-                    throw new ApplicationException( string.Format( "No certificate was found for subject Name {0}", subjectName ) );
+                    throw new ApplicationException( string.Format( "No certificate was found for thumbprint {0}", subjectName ) );
                 }
 
                 return result;

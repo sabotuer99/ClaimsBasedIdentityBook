@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: CLSCompliant(true)]
 [assembly: AssemblyProduct("Claims Identity Guide V2")]
 [assembly: ComVisible(false)]
-[assembly: Guid("0BD19EFA-EC0A-4770-8B5E-C71EDCD45DED")]
+[assembly: Guid("66D19EFA-EC0A-4770-8B5E-C71EDCD45DED")]
 [assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("2.0.0.0")]
 [assembly: NeutralResourcesLanguage("en-US")]

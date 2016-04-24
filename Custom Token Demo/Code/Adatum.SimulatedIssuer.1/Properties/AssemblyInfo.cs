@@ -20,6 +20,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
-[assembly: Guid("70f0de36-c0c7-4a6a-ba19-aa2be4438a27")]
+[assembly: Guid("66f0de36-c0c7-4a6a-ba19-aa2be4438a27")]
 [assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("2.0.0.0")]

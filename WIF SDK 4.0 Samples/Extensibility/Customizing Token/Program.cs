@@ -28,7 +28,10 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
 {
     class Program
     {
-        public const string securityTokenServiceAddress = "http://localhost:8081/STS";
+        public static string securityTokenServiceAddress = "http://" + Environment.MachineName + ":8081/STS";
+        public static string thumbprint = "685d27be857bc38ca4bacdfab634084d720b7532".ToUpper();
+
+
         static void Main()
         {
             ServiceHost serviceHost = null;
@@ -43,7 +46,7 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
                 // Start the service
                 //
                 serviceHost = new ServiceHost( typeof( EchoService ) );
-                string serviceAddress = "http://localhost:8080/EchoService";
+                string serviceAddress = "http://" + Environment.MachineName + ":8080/EchoService";
 
                 ServiceMetadataBehavior metadataBehavior = new ServiceMetadataBehavior();
                 metadataBehavior.HttpGetEnabled = true;
@@ -51,7 +54,7 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
                 serviceHost.Description.Behaviors.Add( metadataBehavior );
                 serviceHost.AddServiceEndpoint( typeof( IEcho ), GetServiceBinding(), serviceAddress );
                 serviceHost.AddServiceEndpoint( typeof( IMetadataExchange ), MetadataExchangeBindings.CreateMexHttpBinding(), serviceAddress + "/mex" );
-                serviceHost.Credentials.ServiceCertificate.SetCertificate( "CN=localhost", StoreLocation.LocalMachine, StoreName.My );
+                serviceHost.Credentials.ServiceCertificate.SetCertificate(StoreLocation.LocalMachine, StoreName.Root, X509FindType.FindByThumbprint, thumbprint);
 
                 FederatedServiceCredentials.ConfigureServiceHost( serviceHost );
                 //
@@ -64,7 +67,7 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
                 //
                 // Start the SecurityTokenService
                 //
-                X509Certificate2 certificate = CertificateUtil.GetCertificate( StoreName.My, StoreLocation.LocalMachine, "CN=localhost" );
+                X509Certificate2 certificate = CertificateUtil.GetCertificate(StoreName.Root, StoreLocation.LocalMachine, thumbprint);
                 SigningCredentials credentials = new X509SigningCredentials( certificate );
                 SecurityTokenServiceConfiguration securityTokenServiceConfiguration = new SecurityTokenServiceConfiguration( securityTokenServiceAddress, credentials );
                 securityTokenServiceConfiguration.SecurityTokenService = typeof( SampleTokenService );
@@ -85,13 +88,24 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
                 //
                 // Invoke the client
                 //
-                echoChannelFactory = new ChannelFactory<IEcho>( GetClientBinding(), new EndpointAddress( new Uri( serviceAddress ), EndpointIdentity.CreateDnsIdentity( "localhost" ) ) );
+
+
+
+
+                echoChannelFactory = new ChannelFactory<IEcho>( GetClientBinding(), 
+                    new EndpointAddress( new Uri( serviceAddress ), 
+                        EndpointIdentity.CreateDnsIdentity( "localhost" ) ) );
 
                 IEcho client = echoChannelFactory.CreateChannel();
                 ( (IClientChannel)client ).OperationTimeout = TimeSpan.MaxValue;
+                
 
                 string echoedString = client.Echo( "Hello" );
                 Console.WriteLine( "The echo service returns '{0}'. \n", echoedString );
+
+
+                Console.WriteLine("Press [Enter] to close service.");
+                Console.ReadLine();
 
                 echoChannelFactory.Close();
 
@@ -114,6 +128,10 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
                     echoChannelFactory.Abort();
                 }
             }
+            catch (Exception e)
+            {
+                Console.Out.WriteLine(e.InnerException.Message);
+            }
             finally
             {
                 if ( serviceHost != null && serviceHost.State != CommunicationState.Faulted )
@@ -134,6 +152,8 @@ namespace Microsoft.IdentityModel.Samples.CustomToken
         /// <returns>A WS2007FederationHttpBinding object for the service.</returns>
         static Binding GetServiceBinding()
         {
+            //This has to be "None" if you want this to work without creating your own Certificate Authority for localhost...
+            //Oops, can't set this to "none" or nothing interesting in the sample even happens... dammit...
             WS2007FederationHttpBinding binding = new WS2007FederationHttpBinding( WSFederationHttpSecurityMode.Message );
 
             binding.Security.Message.IssuerAddress = new EndpointAddress( securityTokenServiceAddress );
